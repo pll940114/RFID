@@ -1,0 +1,87 @@
+<html>
+<head>
+
+	<!-- While the contents of the head tag displays --> 
+	<!-- little to human viewers it's important to the bots. --> 
+	<!-- Search engines have crawlers "Googlebot" that constantly --> 
+	<!-- surf the net following links from one site to another --> 
+	<!-- collecting and indexing everything they find. --> 
+	<!-- Google has an algorithm that then decides which pages are --> 
+	<!-- most relevant to search terms. -->
+
+<meta charset="utf-8">	
+<meta name="description" content="Order App for Out N About Burgers - The Worlds Best Burgers">
+	<!-- The former tells the browser what type of letters -->
+	<!-- the page is written in. If your web site is in a language --> 
+	<!-- other than English be careful to use the correct charset. --> 
+	<!-- If your page is in plain old vanilla English just copy --> 
+	<!-- and paste <meta charset="UTF-8"> just above the title*, --> 
+	<!-- and with any luck you'll never have to think about it again. -->
+	<!-- 								  -->
+	<!-- The latter sometimes shows up in search results and it can help in SEO. -->
+
+<link href="BurgerWars.css" rel="stylesheet" type="text/css">
+<title> Out N About Burgers - Order Page </title>
+
+
+</head>
+<body>
+
+<div id="centerDoc">
+
+<h1>Create Burger</h1>
+		<IMG HEIGHT="115" WIDTH="205" SRC="hamburger.jpg">
+
+<!-- Display Main Meal Type Radio Button -->
+
+<form>
+	<p></p>
+  <input id = "Single" type="radio" name="MainMealInput" value="SingleBurger" checked> Single Burger<br>
+  <input id = "Cheese" type="radio" name="MainMealInput" value="CheeseBurger"> Cheese Burger<br>
+  <input id = "Double" type="radio" name="MainMealInput" value="DoubleDouble"> Double Double
+
+  </form>
+<h1>    </h1>
+
+Upsize Order
+<form>
+<!-- <br> -->
+	<input id = "UpsizeYes" type="radio" name="UpsizeRadioButton" value="Yes"> Yes
+	<input id = "UpsizeNo" type="radio" name="UpsizeRadioButton" value="No"checked> No<br>
+</form>
+
+<h1>    </h1>
+
+Sloppy Style
+<form>
+	<!-- <br> -->
+	<input id = "SloppyYes" type="radio" name="SloppyStyleButton" value="Yes"> Yes
+	<input id = "SloppyNo" type="radio" name="SloppyStyleButton" value="No"checked> No<br>
+</form>
+
+<h1>    </h1>
+
+Extra Toasted
+<form>
+<!-- <br> -->
+	<input id = "ToastedYes" type="radio" name="ExtraToastedButton" value="Yes"> Yes
+	<input id = "ToastedNo" type="radio" name="ExtraToastedButton" value="No"checked> No<br>
+</form>
+
+
+<br>
+<input id="SubmitOrder" type="button" value="Submit Order" onclick="location.href='OrderNumber.html'" /> 
+<br>
+	</div>
+
+	<div id="navigation">
+		<h3>Options</h3>
+		<input id="OrderPageHours" type="button" value="Store Hours" onclick="location.href='StoreHours.html'" />
+		<p></p>
+		<input id="OrderPageHelp" type="button" value="     About      " onclick="location.href='help.html'" />
+		<p></p>
+		<input id="OrderPageExit" type="button" value="       Exit        " onclick="location.href='index.html'" />	
+	</div>
+	
+</body>
+</html>

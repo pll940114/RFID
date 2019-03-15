@@ -1,0 +1,41 @@
+body {
+  background-color: #F6F6F6; /* Creme Color */
+  }
+.screenHeading {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  color: black; 
+  }
+.messageLine {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  color: red;
+  font-weight: 900;
+  }
+.scanLocationPrompt {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  color: white;
+  background-color: black;
+  }
+input#stageLocation {
+  background-color: white;
+  color: black;
+  border: 5px black solid;
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  }
+.submitButton {
+  position: absolute;
+  top: 130px;
+  left: 20px;
+  }
+ .goBackLink {
+  position: absolute;
+  top: 130px;
+  left: 170px;
+  }

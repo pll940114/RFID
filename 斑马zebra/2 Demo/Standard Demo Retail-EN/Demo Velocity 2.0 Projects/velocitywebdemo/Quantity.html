@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Quantity Screen</title>
+<link rel="stylesheet" type="text/css" href="css/Quantity.css">
+
+<script type = "text/javascript">
+function prepareScreen()
+{
+	document.getElementById("quantity").focus();
+	var urlData = window.location.href;
+	
+	var index = urlData.indexOf("=");
+	var remainingURLData = urlData.slice(index + 1);
+	var index2 = remainingURLData.indexOf("&");
+	
+	//Extract quantity.
+	var urlQtyData= urlData.slice(index + 1,index + index2 + 1);
+	
+	
+	//Extract item.
+	index = remainingURLData.indexOf("=");
+	remainingURLData = remainingURLData.slice(index + 1);
+	index = 0;
+	index2 = remainingURLData.indexOf("&");
+	var urlItemData = remainingURLData.slice(index, index2);
+	
+	
+	//Extract task number
+	index = remainingURLData.indexOf("=");
+	remainingURLData = remainingURLData.slice(index + 1);
+	index = 0;
+	index2 = remainingURLData.indexOf("&");
+	var urlTaskNumData = remainingURLData.slice(index, index2);
+	
+	
+	//Extract unit of measure
+	index = remainingURLData.indexOf("=");
+	remainingURLData = remainingURLData.slice(index + 1);
+	index = 0;
+	index2 = remainingURLData.indexOf("&");
+	var urlUOMData = remainingURLData.slice(index, index2);
+	
+	
+	//Extract location.
+	index = remainingURLData.indexOf("=");
+	remainingURLData = remainingURLData.slice(index + 1);
+	index = 0;
+	var urlLocationData = remainingURLData.slice(index);
+	
+	
+	populateFields(urlQtyData, urlItemData, urlTaskNumData, urlUOMData, urlLocationData);
+}
+function populateFields(urlQtyData, urlItemData, urlTaskNumData, urlUOMData, urlLocationData)
+{
+  //alert(urlQtyData + " " + urlItemData + " " + urlTaskNumData + " " + urlLocationData);
+  document.getElementById("locationOnQty").innerHTML = urlLocationData;
+  document.getElementById("taskNumberOnQty").innerHTML = urlTaskNumData;
+  document.getElementById("itemOnQty").innerHTML = urlItemData;
+  document.getElementById("qtyOnQty").innerHTML = urlQtyData;	
+  document.getElementById("unitOfMeasureOnQty").innerHTML = urlUOMData;
+	
+  //Set hidden fields of item number and location.
+  document.getElementById("itemNum").value = urlItemData;
+  document.getElementById("location").value = urlLocationData;
+  document.getElementById("taskNum").value = urlTaskNumData;
+  document.getElementById("uomOnQty").value = urlUOMData;
+	
+  //Set hidden field of transaction type to pass the type on the URL.
+  document.getElementById("transactionTypeOnQty").value = "quantity";
+	
+  //Set quantity short radio buttons and labels to hidden.
+  document.getElementById("shortPickRadioButtonYes").style.visibility = "hidden";
+  document.getElementById("shortPickRadioButtonNo").style.visibility = "hidden";
+  document.getElementById("shortPickRadioYes").style.visibility = "hidden";
+  document.getElementById("shortPickRadioNo").style.visibility = "hidden";
+	
+  //Set href previous node
+  var hrefPreviousNode = document.getElementById("taskGoBackButton");
+  var hrefPreviousNodeURL = "Location.html?item=" + urlItemData + "&task=" + urlTaskNumData + "&type=goback";
+  hrefPreviousNode.setAttribute("href", hrefPreviousNodeURL);
+}
+</script>
+
+</head>
+<body onload='prepareScreen()'>
+<div id="quantityScreen">
+<!--<h3 class="screenHeading">Quantity Screen</h3>-->
+<form action="Location.html" method="get">
+<p class="taskHeading">Task #: </p>
+<p class="taskHeadingValue"><span id="taskNumberOnQty"></span></p>
+<p class="locHeading">Location: </p>
+<p class="locHeadingValue"><span id="locationOnQty"></span></p>
+<p class="qtyHeading">Qty: </p> 
+<p class="qtyHeadingValue"><span id="qtyOnQty"></span>  <span id="unitOfMeasureOnQty"></span></p>
+<p class="itemHeading">Item: </p>
+<p class="itemHeadingValue"><span id="itemOnQty"></span></p>
+<input type="text" class="hiddenFields" name="loc" id="location" size="25" maxlength="25">
+<input type="text" class="hiddenFields" name="item" id="itemNum" size="25" maxlength="25">
+<input type="text" class="hiddenFields" name="taskNumber" id="taskNum" size="25" maxlength="25">
+<input type="text" class="hiddenFields" name="type" id="transactionTypeOnQty" size="25" maxlength="25">
+<input type="text" class="hiddenFields" name="unitOfMeasure" id="uomOnQty" size="5" maxlength="5">
+<p class="messageLine" id="message"></p>
+<p class="qtyPrompt">Enter quantity:</p>
+<input type="text" name="qty" id="quantity" size="25" maxlength="25">
+<BR>
+<input type="submit" class="submitButton" id="submitQuantity" value="Next">
+<BR>
+<BR>
+<a class="goBackLink" id="taskGoBackButton" href="Location.html">Previous</a>
+<label class="shortPickPromptYes" id="shortPickRadioYes"><input type="radio" class="shortPickRadioYes" id="shortPickRadioButtonYes" name="shortPickRadio" value="Yes">Yes</label>
+<label class="shortPickPromptNo" id="shortPickRadioNo"><input type="radio" class="shortPickRadioNo" id="shortPickRadioButtonNo" name="shortPickRadio" value="No" checked="checked">No</label>
+<input type="button" class="closeButton" id="closeButtonId" value="Close" onClick="closeTransaction();">
+</form>
+</div>
+<script type ="text/javascript">
+var buttonSubmitQuantity = document.getElementById("submitQuantity");
+buttonSubmitQuantity.onclick = processSubmit;
+function processSubmit()
+{ 
+   if (document.getElementById("shortPickRadioButtonYes").style.visibility === "visible" && document.getElementById("quantity").value != "")
+  {	
+    //alert("short check radio");
+    clearQtyShortCondition();
+    var radioButtons = document.getElementsByName("shortPickRadio");
+	
+	  if (radioButtons[0].checked)
+	  {
+	    //alert("Radio Yes Condition Processed!");
+		if (document.getElementById("itemNum").value.toString() === "9898312755")
+        {
+          window.location.href = "Printer.html?tasknumber=" + document.getElementById("taskNum").value;
+		}
+		else
+		{
+	      return true;
+		}
+	  }
+	  else if (radioButtons[1].checked)
+	  {
+	    //alert("Radio No Condition Processed!");
+		//Quantity exceeds requested.
+        if (parseInt(document.getElementById("quantity").value) > parseInt(document.getElementById("qtyOnQty").innerHTML))
+        {
+          processQtyExceedsCondition();
+		  //Reset quantity input field to null to force re-entry.
+		  document.getElementById("quantity").value = "";
+		  document.getElementById("quantity").focus();
+		  return false;
+        }
+		//This code checks to determine if the new quantity entry is still less than requested quantity. 
+		if (parseInt(document.getElementById("quantity").value) < parseInt(document.getElementById("qtyOnQty").innerHTML))
+		{
+		  //Reset quantity input field to null to force re-entry.
+		  document.getElementById("quantity").value = "";
+		  document.getElementById("quantity").focus();
+		  
+		  return false;
+		}
+		if ((document.getElementById("itemNum").value.toString() === "9898312755") && (parseInt(document.getElementById("quantity").value) === parseInt(document.getElementById("qtyOnQty").innerHTML)))
+        {
+          window.location.href = "Printer.html?tasknumber=" + document.getElementById("taskNum").value;
+		  return false;
+		}
+		if (parseInt(document.getElementById("quantity").value) === parseInt(document.getElementById("qtyOnQty").innerHTML))
+		{
+		  return true;
+		}
+	  }
+  }
+  //Quantity entered is not a number.
+  if (isNaN(document.getElementById("quantity").value))
+  {
+    document.getElementById("message").innerHTML = "Quantity entered is not a number"; 
+	document.getElementById("quantity").value = "";
+    document.getElementById("quantity").focus();
+	return false;
+  }
+  //No quantity entered.
+  if (document.getElementById("quantity").value === "")
+  {
+    document.getElementById("shortPickRadioButtonYes").style.visibility = "hidden";
+	document.getElementById("shortPickRadioButtonNo").style.visibility = "hidden";
+	document.getElementById("shortPickRadioYes").style.visibility = "hidden";
+	document.getElementById("shortPickRadioNo").style.visibility = "hidden";
+    document.getElementById("message").innerHTML = "Quantity Required"; 
+    document.getElementById("quantity").focus();
+	return false;
+  }	
+  //Quantity exceeds requested.
+  if (parseInt(document.getElementById("quantity").value) > parseInt(document.getElementById("qtyOnQty").innerHTML))
+  {
+    processQtyExceedsCondition();
+	return false;
+  }
+  //Quantity less than requested.
+  if (parseInt(document.getElementById("quantity").value) < parseInt(document.getElementById("qtyOnQty").innerHTML))
+  { 
+    processQtyShortCondition();
+	return false;
+  }
+  if (document.getElementById("itemNum").value.toString() === "9898312755")
+  {
+    window.location.href = "Printer.html?tasknumber=" + document.getElementById("taskNum").value;
+	return false;
+  }
+}
+function processQtyExceedsCondition()
+{
+  document.getElementById("message").innerHTML = "Quantity exceeds requested";
+  //Reset quantity input field to null to force re-entry. 
+  document.getElementById("quantity").value = "";
+  document.getElementById("quantity").focus();
+}
+function processQtyShortCondition()
+{
+  //Set short pick radio button to visible.
+  document.getElementById("shortPickRadioButtonYes").style.visibility = "visible";
+  document.getElementById("shortPickRadioButtonNo").style.visibility = "visible";
+  document.getElementById("shortPickRadioYes").style.visibility = "visible";
+  document.getElementById("shortPickRadioNo").style.visibility = "visible";
+	
+  document.getElementById("message").innerHTML = "Short quantity?";
+  //document.getElementById("quantity").value = "";
+  document.getElementById("shortPickRadioButtonNo").focus();
+}
+function clearQtyShortCondition()
+{
+  //Set short pick radio button to hidden.
+  document.getElementById("shortPickRadioButtonYes").style.visibility = "hidden";
+  document.getElementById("shortPickRadioButtonNo").style.visibility = "hidden";
+  document.getElementById("shortPickRadioYes").style.visibility = "hidden";
+  document.getElementById("shortPickRadioNo").style.visibility = "hidden";
+  document.getElementById("message").innerHTML = "";
+}
+function closeTransaction()
+{
+  window.location.href = "Printer.html?tasknumber=" + document.getElementById("taskNum").value;
+  return false;
+}
+</script>
+</body>
+</html>

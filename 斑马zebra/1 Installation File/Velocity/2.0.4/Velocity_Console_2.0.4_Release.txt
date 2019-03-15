@@ -1,0 +1,235 @@
+Velocity Console
+Copyright (C) 2018 Ivanti
+
+Release 2.0.4
+------------------------------------------------
+Added ability to specifiy a trusted certificate for Web sessions.
+
+Release 2.0.3
+------------------------------------------------
+Added VT support for double high, double wide characters on the native screen.
+Resources tab now shows resources from scripts as well.
+Locking display in reverse portrait and reverse landscape modes are now also supported.
+Added preview of the reformatted screen.
+Added support for Point Mobile scanner profile.
+Added option to remove screen duplicates.
+Added option for web session to use proxy server.
+Added option for project name and company to be changed.
+Changed picklist values for Zebra scanner profiles.
+Added support for SSH private keys that are in OpenSSH or ssh.com format.
+Added "What's New?" window detailing the changes from latest version on first run of the application.
+
+Release 2.0.2
+------------------------------------------------
+No changes.
+
+Release 2.0.1
+------------------------------------------------
+Removed Korean localization.
+Host Profile tab has been redesigned into subgroups (Keyboard, Logging, Mode, Navigation).
+Added preview mode for Native Theme.
+Template 'Matches' text is now hyperlinked on Screens tab.
+Recent colors are now session persistent and shared between all colorpickers in the same project.
+Added Global Preferences for Password, Max Sessions, and Hide Exit.
+Added possibility for hiding toolbar and matching keys to toggle keyboard and menus visibility.
+Added ability to search screen text.
+Changed screen search syntax. 
+Added API to read external files.
+Added possibility to accept unknown SSH host keys automatically or by prompting.
+Screen filters now persist when switching tabs while the project is open.
+Fixed grammar compiler so that a project may contain a large number of STT grammars and successfully create the deployment bundle.
+
+Release 2.0.0
+------------------------------------------------
+Added support for text alignment in elements in Modern Theme in Velocity Console
+Sorting by most recent in projects view is now done chronologically
+Added support for editing the displayed content of certain elements directly from the native screen.
+Added support for displaying scripts associated with the current page.
+Added ability to enable host profile to capture screens from session.
+Rapid Modernization has been implemented.
+Content Injection implemented to convert screen text to images.
+Added ability to import custom CSS for screens.
+Added support for Panasonic FZ-N1 device.
+Added JavaScript syntax highlight for script editor.
+Added label on screens tab that shows the amount of screens matching the selected template.
+New API is available for changing keyboards.
+Added support for having two SSH keys.
+
+Release 1.2.112
+------------------------------------------------
+No changes.
+
+Release 1.2.111
+------------------------------------------------
+Added support for customized background and foreground colors in Native Mode in Velocity Console
+Added language support for Thai.
+Updated to use Zebra EMDK barcode API. Combined Zebra scanner profiles.
+
+Release 1.2.110
+------------------------------------------------
+No changes.
+
+Release 1.2.109
+------------------------------------------------
+SSL now works with the Session Persistence Server (ConnectPro).
+Added support for embedded script resources.
+Added ability to resize screen panels.
+Added ability to collapse/expand properties panel in screens.
+Added ability to reorder screen list by drag and drop.
+Added ability to reorder script list by drag and drop. 
+Added ability to reorder scope list by drag and drop. 
+Added ability to search screens by template name.
+Added auto-complete search feature to screens.
+Added double click to edit script.
+Added double click to edit scope.
+Added support for WLS script hook.
+Added support for new Zebra scanner settings.
+Added ability to lock down modern or native mode.
+Added default scope option to scripts.
+
+Release 1.2.108
+------------------------------------------------
+Added SSL certificate to host profile for host validation. End user is no longer allowed to approve any other certificates.
+
+Release 1.2.107
+------------------------------------------------
+Added automatic merge of adjacent key text.
+Added configurable back and forward screen navigation commands for VT and XTERM host profiles.
+Moved screen list to left side of screen.
+Added foreign language support when configuring voice recognition for speech-to-text.
+Added Localization support.
+Added tags to screens with support for filtering by one or more tags. 
+Added transparent keyboard support.
+Added ability to disable screen panning in TE profiles while in native mode.
+Added support for font sizes between 2 and 400 for components.
+Update to Ivanti icons and images.
+Added launch on startup option.
+Added scripting API to control LED and vibration on supported devices.
+
+Release 1.2.106
+------------------------------------------------
+Added native theme font size.
+
+Release 1.2.105
+------------------------------------------------
+No changes.
+
+Release 1.2.104
+------------------------------------------------
+Added Speakeasy Speech to Text and Text to Speech voice support for TE projects.
+Added a remove all button to screens property tab on the pull down, under the remove button.
+Changed the screens view to always show the last screen displayed after navigating away and then back.
+Projects now return to last screen visited.
+Added support for Bluebird devices.
+Projects now default to Native Mode.
+Added ability to disable pinch\zoom.
+Added ability to use friendly name as workstation ID.
+Added ability to specify scope when linking a script.
+Added template scope. Use the format @templateName.
+Added field scope. Use the format @templateName:componentId.
+
+Release 1.2.103
+------------------------------------------------
+Added LU Name support for 3270.
+
+Release 1.2.101
+------------------------------------------------
+Added the ability to name templates.
+Added automatic copy of templates when adding key text or removing cursor zones.
+Added ability to use file:/// url format for the Host Address.
+Added support for providing a html file in the project resources and pointing to it from the Host Address. 
+Added support for Honeywell scanner profiles.
+Added Oracle SIM project type.
+Fixed an issue where last screen could not be deleted from a project.
+Fixed an issue where banner background color could not be overridden.
+Fixed an issue dragging an element below a span if the span is at the bottom of the page.
+
+Release 1.2.100
+------------------------------------------------
+Added a general keyboard visibility setting that includes options for show, hide, or disable.
+Added the ability to delete a screen and its associated template.
+Added the ability to enable session logging for TE projects.
+Added the ability to use the footer component in TE projects.
+Added support for custom Telnet negotiation string.
+Fixed an issue with numeric values that Velocity 1.2 uses for the definition of tables.
+Fixed an issue with crashing while importing formatting rules in some locales.
+Added Datalogic scanner profile.
+Added auto-switch to native mode if no matching template is found.
+
+Release 1.2.6
+------------------------------------------------
+No changes.
+
+Release 1.2.5
+------------------------------------------------
+Changed %MAC% tag to insert a MAC adress without ":" and added %MAC:% to return insert with ":"
+
+Release 1.2.4
+------------------------------------------------
+Added support for beep replacement using audio resources in scripts.
+
+Release 1.2.2
+------------------------------------------------
+Added custom user-agent string functionality for Web projects. Strings must conform to RFC standards for user-agent strings. 
+Supported tags are:
+- "%ESN%"
+- "%IMEI%"
+- "%MAC%"
+- "%IP%"
+- "%MODEL%"
+- "%MANUFACTURER%"
+
+Release 1.2.1
+------------------------------------------------
+No changes.
+
+Release 1.2.0
+------------------------------------------------
+Added Scripting.
+-Added Oversized Scanning script for 5250 and 3270.
+Added Keyboard Height option to host profiles on the Console to set a percentage of screen to use for the keyboard.
+Added Server Language option to host profiles to select code page.
+Changed some key code values to use Unicode private use area.
+-Keycodes of format 00XX not changed
+-Keycodes of format XX00 changed to E0XX
+-Keycodes of format CXXX changed to EXXX
+-Keycodes for Euro sign, bracket, broken bar, cent sign, pound sign, currency sign, and Yen sign were changed to their Unicode values.
+Added key macro capabilities to Menu Up Command, Menu Down Command, Hardware Back Button Command, Shortcut Commands, Menu Item Commands, and virtual keyboard keys.
+-Macros can consist of any combination of the following:
+--Literal ASCII characters that are sent verbatim "Abc123"
+--Hex keys codes in the format "{hex:0001}"
+--Named function keys "{F1}"
+--Named control keys "{ctrl-x}"
+--Other named keys "{enter}" "{send}" "{tab}"
+--Scanner soft trigger "{special:scan}"
+--Auto-enter value "{AutoEnter}"; if Auto Carriage Return option is enabled it will send an enter to the host.
+Updated the User Interface of the host profile to separate settings and options into tabs.
+Added ability to specify the project type when creating a new project.
+Added support for web resource files to be included in a project. (js, css, htm, html)
+Added Dynamic Tables.
+Added support for non-US locales.
+
+
+Release 1.0.1
+------------------------------------------------
+Added a span container for screen elements.
+Added a table container for screen elements.
+Added cursor zones for screen matching.
+Added VT Scan Terminator setting.
+Added VT Answerback.
+Added IBM Workstation ID and Retry Workstation ID.
+Added Autologin feature for VT and IBM hosts.
+Added option to Disable Predictive Formatting.
+Updated default styles for elements and changed margins between elements.
+Fix for Defect: Illumination Mode isn't enabled by default in Velocity
+
+Added Predictive/Template indicator for Reformatted Screen.
+Reformatted screen elements are now able to be reordered.
+Fix for Defect: Console Style Editor shows incorrect feedback option when feedback is blank in the keyboard xml
+Fix for Defect: Making element changes on screens with a scrollbar shifts screen to the top
+Fix for Defect: Global context menu items show with toggle in wrong state
+Fix for Defect: Deployment file name that has dots gets its name truncated
+
+Release 1.0.0
+------------------------------------------------
+Initial Release

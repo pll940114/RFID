@@ -1,0 +1,30 @@
+body {
+  background-color: #F6F6F6; /* Creme Color */
+  }
+.screenHeading {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  color: white;
+  background-color: black;
+  }
+.taskOnholdYes {
+    position: absolute;
+	top: 50px;
+	left: 130px;
+	color: red;
+	font-weight: 900;
+	}
+.taskOnholdNo {
+    position: absolute;
+	top: 50px;
+	left: 175px;
+	color: red;
+	font-weight: 900;
+	}
+.submitButton {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  }
+ .

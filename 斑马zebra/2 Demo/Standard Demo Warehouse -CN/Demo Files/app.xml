@@ -1,0 +1,1552 @@
+<?xml version="1.0"?>
+<DemoApp>
+  <Name>Velocity Extended Server</Name>
+  <StartScreen>31242079</StartScreen>
+  <Resources>
+    <ResourceList>
+      <Name>WorkArea</Name>
+      <IsRandom>true</IsRandom>
+      <TriggerScreen>32482787</TriggerScreen>
+      <Value>U08CS</Value>
+      <Value>U09CS</Value>
+      <Value>U10CS</Value>
+    </ResourceList>
+    <ResourceList>
+      <Name>Vehicle</Name>
+      <IsRandom>false</IsRandom>
+      <TriggerScreen>32482787</TriggerScreen>
+      <Value>FORK</Value>
+    </ResourceList>
+    <ResourceList>
+      <Name>CycleCountDescriptionLine1</Name>
+      <IsRandom>false</IsRandom>
+      <TriggerScreen>56725880</TriggerScreen>
+      <Value>Plush Brown 12"</Value>
+      <Value>Tomy Jumbo</Value>
+      <Value>Lightsaber w/ Lights,</Value>
+    </ResourceList>
+    <ResourceList>
+      <Name>CycleCountDescriptionLine2</Name>
+      <IsRandom>false</IsRandom>
+      <TriggerScreen>56725880</TriggerScreen>
+      <Value>Teddy Bear</Value>
+      <Value>Jamboree</Value>
+      <Value>Sounds</Value>
+    </ResourceList>
+    <ResourceList>
+      <Name>CycleCountOnHand</Name>
+      <IsRandom>false</IsRandom>
+      <TriggerScreen>56725880</TriggerScreen>
+      <Value>7</Value>
+      <Value>44</Value>
+      <Value>13</Value>
+    </ResourceList>
+    <ResourceList>
+      <Name>ItemLookupDescriptionLine1</Name>
+      <IsRandom>false</IsRandom>
+      <TriggerScreen>44059723</TriggerScreen>
+      <Value>Plush Brown 12"</Value>
+      <Value>Tomy Jumbo</Value>
+      <Value>Lightsaber w/ Lights,</Value>
+    </ResourceList>
+    <ResourceList>
+      <Name>ItemLookupDescriptionLine2</Name>
+      <IsRandom>false</IsRandom>
+      <TriggerScreen>44059723</TriggerScreen>
+      <Value>Teddy Bear</Value>
+      <Value>Jamboree</Value>
+      <Value>Sounds</Value>
+    </ResourceList>
+    <ResourceList>
+      <Name>ItemLookupOnhand</Name>
+      <IsRandom>false</IsRandom>
+      <TriggerScreen>44059723</TriggerScreen>
+      <Value>7</Value>
+      <Value>44</Value>
+      <Value>13</Value>
+    </ResourceList>
+    <ResourceList>
+      <Name>ItemLookupPrice</Name>
+      <IsRandom>false</IsRandom>
+      <TriggerScreen>44059723</TriggerScreen>
+      <Value>29.99</Value>
+      <Value>39.99</Value>
+      <Value>49.99</Value>
+    </ResourceList>
+    <ResourceList>
+      <Name>LocationPicking</Name>
+      <IsRandom>false</IsRandom>
+      <TriggerScreen>61618214</TriggerScreen>
+      <Value>M58-15-F10</Value>
+      <Value>F29-86-G14</Value>
+      <Value>A34-40-C11</Value>
+      <Value>B13-02-A19</Value>
+    </ResourceList>
+    <ResourceList>
+      <Name>ItemNumbers</Name>
+      <IsRandom>false</IsRandom>
+      <TriggerScreen>61618214</TriggerScreen>
+      <Value>7462523948</Value>
+      <Value>7462882715</Value>
+      <Value>0037261735</Value>
+      <Value>1298300367</Value>
+    </ResourceList>
+    <ResourceList>
+      <Name>Quantity</Name>
+      <IsRandom>false</IsRandom>
+      <TriggerScreen>61618214</TriggerScreen>
+      <Value>27</Value>
+      <Value>17</Value>
+      <Value>43</Value>
+      <Value>12</Value>
+    </ResourceList>
+    <ResourceList>
+      <Name>Units</Name>
+      <IsRandom>true</IsRandom>
+      <TriggerScreen>61618214</TriggerScreen>
+      <Value>EA</Value>
+      <Value>CS</Value>
+    </ResourceList>
+    <ResourceList>
+      <Name>CycleCountPartNumber</Name>
+      <IsRandom>false</IsRandom>
+      <TriggerScreen>56725880</TriggerScreen>
+      <Value>320184</Value>
+      <Value>520172</Value>
+      <Value>724189</Value>
+    </ResourceList>
+    <ResourceList>
+      <Name>PickingTaskNumber</Name>
+      <IsRandom>false</IsRandom>
+      <TriggerScreen>61618214</TriggerScreen>
+      <Value>205-679231-01</Value>
+      <Value>405-679231-02</Value>
+      <Value>995-645231-01</Value>
+    </ResourceList>
+    <ResourceList>
+      <Name>LocationCycleCount</Name>
+      <IsRandom>false</IsRandom>
+      <TriggerScreen>43318842</TriggerScreen>
+      <Value>M58-15-F10</Value>
+      <Value>F29-86-G14</Value>
+      <Value>A34-40-C11</Value>
+      <Value>B13-02-A19</Value>
+    </ResourceList>
+  </Resources>
+  <Screen>
+    <Hash>31242079</Hash>
+    <Name>Start Screen</Name>
+    <Cursor>
+      <X>7</X>
+      <Y>9</Y>
+    </Cursor>
+    <CursorFormatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m</CursorFormatting>
+    <Field>
+      <Name>MainMenuChoice</Name>
+      <FieldMax>20</FieldMax>
+      <MaskField>false</MaskField>
+      <SaveField>true</SaveField>
+    </Field>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m1  拣选%ENTER%
+2  物品查询%ENTER%
+3  循环盘点%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+选择%ESC%[0m:   %ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m  %ESC%[0;32;40m%ESC%[0m%ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Consolas;}{\f1\fmodern\fprq6\fcharset134 \'cb\'ce\'cc\'e5;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;\red0\green0\blue0;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36 1  \f1\'bc\'f0\'d1\'a1\f0\par%ENTER%
+2  \f1\'ce\'ef\'c6\'b7\'b2\'e9\'d1\'af\f0\par%ENTER%
+3  \f1\'d1\'ad\'bb\'b7\'c5\'cc\'b5\'e3\f0\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\f1\'d1\'a1\'d4\'f1\highlight2\f0 :   \cf2\highlight1   \cf1\highlight0\par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables />
+    <ChildScreens>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>43318842</ScreenRef>
+        <Comparison>(MainMenuChoice eq 3)</Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>13865292</ScreenRef>
+        <Comparison>(MainMenuChoice eq 2)</Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>196193</ScreenRef>
+        <Comparison>(MainMenuChoice eq 1)</Comparison>
+      </ChildScreen>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>43318842</Hash>
+    <Name>CycleCountLocation</Name>
+    <Cursor>
+      <X>10</X>
+      <Y>1</Y>
+    </Cursor>
+    <CursorFormatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m</CursorFormatting>
+    <Field>
+      <Name>CycleCountPartScanned</Name>
+      <FieldMax>20</FieldMax>
+      <MaskField>false</MaskField>
+      <SaveField>true</SaveField>
+    </Field>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m  循环盘点%ENTER%
+%ENTER%
+位置:   %ENTER%
+条目: %ENTER%
+描述:%ENTER%
+%ENTER%
+%ENTER%
+库存数量:    %ENTER%
+扫描位置:%ENTER%
+%ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m              %ESC%[0;32;40m%ESC%[0m%ENTER%
+%ENTER%
+F3=退出%ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Consolas;}{\f1\fmodern\fprq6\fcharset134 \'cb\'ce\'cc\'e5;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;\red0\green0\blue0;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36   \f1\'d1\'ad\'bb\'b7\'c5\'cc\'b5\'e3\f0\par%ENTER%
+\par%ENTER%
+\f1\'ce\'bb\'d6\'c3\f0 :   \par%ENTER%
+\f1\'cc\'f5\'c4\'bf\f0 : \par%ENTER%
+\f1\'c3\'e8\'ca\'f6\f0 :\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\f1\'bf\'e2\'b4\'e6\'ca\'fd\'c1\'bf\f0 :    \par%ENTER%
+\f1\'c9\'a8\'c3\'e8\'ce\'bb\'d6\'c3\f0 :\par%ENTER%
+\cf2\highlight1               \cf1\highlight0\par%ENTER%
+\par%ENTER%
+F3=\f1\'cd\'cb\'b3\'f6\f0\par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables>
+      <Variable>
+        <ResourceRef>CycleCountPartNumber</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>4</X>
+          <Y>7</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>CycleCountDescriptionLine1</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>6</X>
+          <Y>1</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>ItemLookupDescriptionLine2</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>7</X>
+          <Y>1</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>LocationCycleCount</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>3</X>
+          <Y>7</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>CycleCountOnHand</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>8</X>
+          <Y>10</Y>
+        </Start>
+      </Variable>
+    </Variables>
+    <ChildScreens>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>56725880</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>%ESC%OR</TriggerKey>
+        <ScreenRef>31242079</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>56725880</Hash>
+    <Name>CycleCountQty</Name>
+    <Cursor>
+      <X>10</X>
+      <Y>1</Y>
+    </Cursor>
+    <CursorFormatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m</CursorFormatting>
+    <Field>
+      <Name>CycleCountNum</Name>
+      <FieldMax>2</FieldMax>
+      <MaskField>false</MaskField>
+      <SaveField>true</SaveField>
+    </Field>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m  循环盘点%ENTER%
+%ENTER%
+位置:      %ENTER%
+条目: %ENTER%
+描述:%ENTER%
+%ENTER%
+%ENTER%
+库存数量:    %ENTER%
+实际数量:%ENTER%
+%ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m  %ESC%[0;32;40m%ESC%[0m            %ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m%ENTER%
+%ESC%[0;32;40m%ESC%[0m%ENTER%
+F3=退出%ENTER%
+%ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Consolas;}{\f1\fmodern\fprq6\fcharset134 \'cb\'ce\'cc\'e5;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;\red0\green0\blue0;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36   \f1\'d1\'ad\'bb\'b7\'c5\'cc\'b5\'e3\f0\par%ENTER%
+\par%ENTER%
+\f1\'ce\'bb\'d6\'c3\f0 :      \par%ENTER%
+\f1\'cc\'f5\'c4\'bf\f0 : \par%ENTER%
+\f1\'c3\'e8\'ca\'f6\f0 :\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\f1\'bf\'e2\'b4\'e6\'ca\'fd\'c1\'bf\f0 :    \par%ENTER%
+\f1\'ca\'b5\'bc\'ca\'ca\'fd\'c1\'bf\f0 :\par%ENTER%
+\cf2\highlight1   \cf1\highlight2             \cf2\highlight1\par%ENTER%
+\cf1\highlight0\par%ENTER%
+F3=\f1\'cd\'cb\'b3\'f6\f0\par%ENTER%
+\par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables>
+      <Variable>
+        <ResourceRef>CycleCountPartNumber</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>4</X>
+          <Y>7</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>CycleCountDescriptionLine1</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>6</X>
+          <Y>1</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>CycleCountDescriptionLine2</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>7</X>
+          <Y>1</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>LocationCycleCount</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m</Formatting>
+        <Start>
+          <X>3</X>
+          <Y>7</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>CycleCountOnHand</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>8</X>
+          <Y>10</Y>
+        </Start>
+      </Variable>
+    </Variables>
+    <ChildScreens>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>43318842</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>%ESC%OR</TriggerKey>
+        <ScreenRef>31242079</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>31242079</Hash>
+    <Name>Start Screen</Name>
+    <Cursor>
+      <X>7</X>
+      <Y>9</Y>
+    </Cursor>
+    <CursorFormatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m</CursorFormatting>
+    <Field>
+      <Name>MainMenuChoice</Name>
+      <FieldMax>20</FieldMax>
+      <MaskField>false</MaskField>
+      <SaveField>true</SaveField>
+    </Field>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m1  拣选%ENTER%
+2  物品查询%ENTER%
+3  循环盘点%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+选择%ESC%[0m:   %ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m  %ESC%[0;32;40m%ESC%[0m%ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Consolas;}{\f1\fmodern\fprq6\fcharset134 \'cb\'ce\'cc\'e5;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;\red0\green0\blue0;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36 1  \f1\'bc\'f0\'d1\'a1\f0\par%ENTER%
+2  \f1\'ce\'ef\'c6\'b7\'b2\'e9\'d1\'af\f0\par%ENTER%
+3  \f1\'d1\'ad\'bb\'b7\'c5\'cc\'b5\'e3\f0\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\f1\'d1\'a1\'d4\'f1\highlight2\f0 :   \cf2\highlight1   \cf1\highlight0\par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables />
+    <ChildScreens>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>43318842</ScreenRef>
+        <Comparison>(MainMenuChoice eq 3)</Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>13865292</ScreenRef>
+        <Comparison>(MainMenuChoice eq 2)</Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>196193</ScreenRef>
+        <Comparison>(MainMenuChoice eq 1)</Comparison>
+      </ChildScreen>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>13865292</Hash>
+    <Name>ItemLookup</Name>
+    <Cursor>
+      <X>3</X>
+      <Y>7</Y>
+    </Cursor>
+    <CursorFormatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m</CursorFormatting>
+    <Field>
+      <Name>ItemLookupPartScanned</Name>
+      <FieldMax>20</FieldMax>
+      <MaskField>false</MaskField>
+      <SaveField>true</SaveField>
+    </Field>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m  物品查询%ENTER%
+%ENTER%
+物料:%ENTER%
+描述:%ENTER%
+%ENTER%
+%ENTER%
+库存价格:%ENTER%
+    库存价格:%ENTER%
+%ENTER%
+F3=退出%ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Consolas;}{\f1\fmodern\fprq6\fcharset134 \'cb\'ce\'cc\'e5;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36   \f1\'ce\'ef\'c6\'b7\'b2\'e9\'d1\'af\f0\par%ENTER%
+\par%ENTER%
+\f1\'ce\'ef\'c1\'cf\f0 :\par%ENTER%
+\f1\'c3\'e8\'ca\'f6\f0 :\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\f1\'bf\'e2\'b4\'e6\'bc\'db\'b8\'f1\f0 :\par%ENTER%
+    \f1\'bf\'e2\'b4\'e6\'bc\'db\'b8\'f1\f0 :\par%ENTER%
+\par%ENTER%
+F3=\f1\'cd\'cb\'b3\'f6\f0\par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables />
+    <ChildScreens>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>44059723</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>%ESC%OR</TriggerKey>
+        <ScreenRef>31242079</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>44059723</Hash>
+    <Name>ItemLookupResults</Name>
+    <Cursor>
+      <X>12</X>
+      <Y>9</Y>
+    </Cursor>
+    <CursorFormatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</CursorFormatting>
+    <Field>
+      <Name />
+      <FieldMax>20</FieldMax>
+      <MaskField>false</MaskField>
+      <SaveField>false</SaveField>
+    </Field>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m  物品查询%ENTER%
+%ENTER%
+物料: %ENTER%
+描述:%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+库存价格:   $%ENTER%
+    库存数量: %ENTER%
+%ENTER%
+F3=返回%ENTER%
+Enter=检查库存%ENTER%
+%ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Consolas;}{\f1\fmodern\fprq6\fcharset134 \'cb\'ce\'cc\'e5;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36   \f1\'ce\'ef\'c6\'b7\'b2\'e9\'d1\'af\f0\par%ENTER%
+\par%ENTER%
+\f1\'ce\'ef\'c1\'cf\f0 : \par%ENTER%
+\f1\'c3\'e8\'ca\'f6\f0 :\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\f1\'bf\'e2\'b4\'e6\'bc\'db\'b8\'f1\f0 :   $\par%ENTER%
+    \f1\'bf\'e2\'b4\'e6\'ca\'fd\'c1\'bf\f0 : \par%ENTER%
+\par%ENTER%
+F3=\f1\'b7\'b5\'bb\'d8\f0\par%ENTER%
+Enter=\f1\'bc\'ec\'b2\'e9\'bf\'e2\'b4\'e6\f0\par%ENTER%
+\par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables>
+      <Variable>
+        <ResourceRef>ItemLookupDescriptionLine1</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>5</X>
+          <Y>1</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>ItemLookupDescriptionLine2</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>6</X>
+          <Y>1</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>ItemLookupOnhand</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>9</X>
+          <Y>14</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>ItemLookupPrice</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>8</X>
+          <Y>15</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>ItemLookupPartScanned</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>3</X>
+          <Y>7</Y>
+        </Start>
+      </Variable>
+    </Variables>
+    <ChildScreens>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>60067991</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>true</IsAction>
+        <ActionType>ACTION_BACK</ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ESC%OR</TriggerKey>
+        <ScreenRef>42561625</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>60067991</Hash>
+    <Name>StoresInventory</Name>
+    <Cursor>
+      <X>0</X>
+      <Y>0</Y>
+    </Cursor>
+    <CursorFormatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m</CursorFormatting>
+    <Field>
+      <Name />
+      <FieldMax>20</FieldMax>
+      <MaskField>false</MaskField>
+      <SaveField>false</SaveField>
+    </Field>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m位置              库存数量%ENTER%
+-------------------------%ENTER%
+Alderwood Mall         10%ENTER%
+Cascade Dr.             4%ENTER%
+Westlake                2%ENTER%
+Times Square           22%ENTER%
+West Pine Ave.          9%ENTER%
+South Jordan            0%ENTER%
+%ENTER%
+Enter=继续%ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern\fprq6\fcharset134 \'cb\'ce\'cc\'e5;}{\f1\fnil\fcharset0 Consolas;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36\'ce\'bb\'d6\'c3\f1               \f0\'bf\'e2\'b4\'e6\'ca\'fd\'c1\'bf\par%ENTER%
+\f1 -------------------------\par%ENTER%
+Alderwood Mall         10\par%ENTER%
+Cascade Dr.             4\par%ENTER%
+Westlake                2\par%ENTER%
+Times Square           22\par%ENTER%
+West Pine Ave.          9\par%ENTER%
+South Jordan            0\par%ENTER%
+\par%ENTER%
+Enter=\f0\'bc\'cc\'d0\'f8\f1\par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables />
+    <ChildScreens>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>13865292</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>42561625</Hash>
+    <Name>ACTION_BACK</Name>
+    <Cursor>
+      <X>0</X>
+      <Y>0</Y>
+    </Cursor>
+    <CursorFormatting>
+    </CursorFormatting>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m %ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Consolas;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36  \par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables />
+    <ChildScreens>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>196193</Hash>
+    <Name>Picking Scan Tote</Name>
+    <Cursor>
+      <X>4</X>
+      <Y>1</Y>
+    </Cursor>
+    <CursorFormatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ESC%[7m</CursorFormatting>
+    <Field>
+      <Name>PickingTaskScanned</Name>
+      <FieldMax>20</FieldMax>
+      <MaskField>false</MaskField>
+      <SaveField>true</SaveField>
+    </Field>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m出库拣选%ENTER%
+%ENTER%
+扫描任务 #:%ENTER%
+%ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m               %ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+%ESC%[0;32;40m%ESC%[0m  F3=返回%ESC%[0m%ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern\fprq6\fcharset134 \'cb\'ce\'cc\'e5;}{\f1\fnil\fcharset0 Consolas;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;\red0\green0\blue0;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36\'b3\'f6\'bf\'e2\'bc\'f0\'d1\'a1\f1\par%ENTER%
+\par%ENTER%
+\f0\'c9\'a8\'c3\'e8\'c8\'ce\'ce\'f1\f1  #:\par%ENTER%
+\cf2\highlight1                \par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\cf1\highlight2   F3=\f0\'b7\'b5\'bb\'d8\highlight0\f1\par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables />
+    <ChildScreens>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>61618214</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>%ESC%OR</TriggerKey>
+        <ScreenRef>31242079</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+    </ChildScreens>
+    <Errors>
+      <Error>
+        <ClearField>true</ClearField>
+        <Message>ERROR - Task # cannot be blanks!</Message>
+        <Key>%ENTER%</Key>
+        <Start>
+          <X>7</X>
+          <Y>1</Y>
+        </Start>
+        <Comparison>'ToteNumber' eq ''</Comparison>
+      </Error>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>61618214</Hash>
+    <Name>Location</Name>
+    <Cursor>
+      <X>6</X>
+      <Y>1</Y>
+    </Cursor>
+    <CursorFormatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ESC%[7m</CursorFormatting>
+    <Field>
+      <Name>LocationScanned</Name>
+      <FieldMax>20</FieldMax>
+      <MaskField>false</MaskField>
+      <SaveField>true</SaveField>
+    </Field>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m任务#:             %ENTER%
+位置:             数量:     %ENTER%
+条目:          %ENTER%
+%ENTER%
+扫描位置:%ENTER%
+%ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m              %ENTER%
+%ENTER%
+%ESC%[0;32;40m%ESC%[0m%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+F3=返回 F4=关闭%ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern\fprq6\fcharset134 \'cb\'ce\'cc\'e5;}{\f1\fnil\fcharset0 Consolas;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;\red0\green0\blue0;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36\'c8\'ce\'ce\'f1\f1 #:             \par%ENTER%
+\f0\'ce\'bb\'d6\'c3\f1 :             \f0\'ca\'fd\'c1\'bf\f1 :     \par%ENTER%
+\f0\'cc\'f5\'c4\'bf\f1 :          \par%ENTER%
+\par%ENTER%
+\f0\'c9\'a8\'c3\'e8\'ce\'bb\'d6\'c3\f1 :\par%ENTER%
+\cf2\highlight1               \par%ENTER%
+\par%ENTER%
+\cf1\highlight0\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+F3=\f0\'b7\'b5\'bb\'d8\f1  F4=\f0\'b9\'d8\'b1\'d5\f1\par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables>
+      <Variable>
+        <ResourceRef>ItemNumbers</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>3</X>
+          <Y>7</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>Quantity</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m</Formatting>
+        <Start>
+          <X>2</X>
+          <Y>24</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>Units</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>2</X>
+          <Y>27</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>PickingTaskScanned</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m</Formatting>
+        <Start>
+          <X>1</X>
+          <Y>7</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>LocationPicking</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m</Formatting>
+        <Start>
+          <X>2</X>
+          <Y>7</Y>
+        </Start>
+      </Variable>
+    </Variables>
+    <ChildScreens>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>54055222</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>true</IsAction>
+        <ActionType>ACTION_BACK</ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ESC%OR</TriggerKey>
+        <ScreenRef>42824513</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>OS</TriggerKey>
+        <ScreenRef>47005386</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+    </ChildScreens>
+    <Errors>
+      <Error>
+        <ClearField>true</ClearField>
+        <Message>ERROR - Locn cnt be blnks</Message>
+        <Key>%ENTER%</Key>
+        <Start>
+          <X>8</X>
+          <Y>1</Y>
+        </Start>
+        <Comparison>LocationScanned eq ''</Comparison>
+      </Error>
+      <Error>
+        <ClearField>true</ClearField>
+        <Message>ERROR - Wrong Locn                    </Message>
+        <Key>%ENTER%</Key>
+        <Start>
+          <X>8</X>
+          <Y>1</Y>
+        </Start>
+        <Comparison>LocationScanned ne 'Locations'</Comparison>
+      </Error>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>54055222</Hash>
+    <Name>Quantity</Name>
+    <Cursor>
+      <X>5</X>
+      <Y>6</Y>
+    </Cursor>
+    <CursorFormatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m</CursorFormatting>
+    <Field>
+      <Name>Quantityinput</Name>
+      <FieldMax>20</FieldMax>
+      <MaskField>false</MaskField>
+      <SaveField>true</SaveField>
+    </Field>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m任务#:  %ENTER%
+位置:             数量:    %ENTER%
+条目: %ENTER%
+%ENTER%
+数量: %ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m  %ESC%[0;32;40m%ESC%[0m%ENTER%
+%ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m%ENTER%
+%ESC%[0;32;40m%ESC%[0m%ENTER%
+输入数量%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+F3=返回 F4=关闭%ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern\fprq6\fcharset134 \'cb\'ce\'cc\'e5;}{\f1\fnil\fcharset0 Consolas;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;\red0\green0\blue0;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36\'c8\'ce\'ce\'f1\f1 #:  \par%ENTER%
+\f0\'ce\'bb\'d6\'c3\f1 :             \f0\'ca\'fd\'c1\'bf\f1 :    \par%ENTER%
+\f0\'cc\'f5\'c4\'bf\f1 : \par%ENTER%
+\par%ENTER%
+\f0\'ca\'fd\'c1\'bf\f1 : \cf2\highlight1   \cf1\highlight2\par%ENTER%
+\cf2\highlight1\par%ENTER%
+\cf1\highlight0\par%ENTER%
+\f0\'ca\'e4\'c8\'eb\'ca\'fd\'c1\'bf\f1\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+F3=\f0\'b7\'b5\'bb\'d8\f1  F4=\f0\'b9\'d8\'b1\'d5\f1\par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables>
+      <Variable>
+        <ResourceRef>ItemNumbers</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>3</X>
+          <Y>7</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>Quantity</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m</Formatting>
+        <Start>
+          <X>2</X>
+          <Y>24</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>Units</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>2</X>
+          <Y>27</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>Quantityinput</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m</Formatting>
+        <Start>
+          <X>5</X>
+          <Y>6</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>PickingTaskScanned</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m</Formatting>
+        <Start>
+          <X>1</X>
+          <Y>7</Y>
+        </Start>
+      </Variable>
+      <Variable>
+        <ResourceRef>LocationPicking</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m</Formatting>
+        <Start>
+          <X>2</X>
+          <Y>7</Y>
+        </Start>
+      </Variable>
+    </Variables>
+    <ChildScreens>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>47005386</ScreenRef>
+        <Comparison>(Quantityinput eq Quantity) and (LocationPicking eq 'B13-02-A19')</Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>true</IsAction>
+        <ActionType>ACTION_BACK</ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ESC%OR</TriggerKey>
+        <ScreenRef>37327587</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>54036092</ScreenRef>
+        <Comparison>(Quantityinput lt Quantity) and (Quantityinput ne '')</Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>61618214</ScreenRef>
+        <Comparison>(Quantityinput eq Quantity) and (LocationPicking ne 'B13-02-A19')</Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>OS</TriggerKey>
+        <ScreenRef>47005386</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+    </ChildScreens>
+    <Errors>
+      <Error>
+        <ClearField>true</ClearField>
+        <Message>ERR - Qty cannot be blanks                               </Message>
+        <Key>%ENTER%</Key>
+        <Start>
+          <X>8</X>
+          <Y>1</Y>
+        </Start>
+        <Comparison>Quantityinput eq ''</Comparison>
+      </Error>
+      <Error>
+        <ClearField>true</ClearField>
+        <Message>Error - Invalid Qty                                        </Message>
+        <Key>%ENTER%</Key>
+        <Start>
+          <X>8</X>
+          <Y>1</Y>
+        </Start>
+        <Comparison>Quantityinput gt Quantity</Comparison>
+      </Error>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>47005386</Hash>
+    <Name>Printer Screen</Name>
+    <Cursor>
+      <X>4</X>
+      <Y>1</Y>
+    </Cursor>
+    <CursorFormatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ESC%[7m</CursorFormatting>
+    <Field>
+      <Name>PrinterNumber</Name>
+      <FieldMax>20</FieldMax>
+      <MaskField>false</MaskField>
+      <SaveField>true</SaveField>
+    </Field>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m任务 #: %ENTER%
+%ENTER%
+扫描打印机:%ENTER%
+%ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m             %ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+%ESC%[0;32;40m%ESC%[0m  F3=暂停%ESC%[0m%ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern\fprq6\fcharset134 \'cb\'ce\'cc\'e5;}{\f1\fnil\fcharset0 Consolas;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;\red0\green0\blue0;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36\'c8\'ce\'ce\'f1\f1  #: \par%ENTER%
+\par%ENTER%
+\f0\'c9\'a8\'c3\'e8\'b4\'f2\'d3\'a1\'bb\'fa\f1 :\par%ENTER%
+\cf2\highlight1              \par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\cf1\highlight2   F3=\f0\'d4\'dd\'cd\'a3\highlight0\f1\par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables>
+      <Variable>
+        <ResourceRef>PickingTaskScanned</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ENTER%</Formatting>
+        <Start>
+          <X>1</X>
+          <Y>8</Y>
+        </Start>
+      </Variable>
+    </Variables>
+    <ChildScreens>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>44975641</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>%ESC%OR</TriggerKey>
+        <ScreenRef>7727381</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+    </ChildScreens>
+    <Errors>
+      <Error>
+        <ClearField>true</ClearField>
+        <Message>Err - Printer cannot be blanks!</Message>
+        <Key>%ENTER%</Key>
+        <Start>
+          <X>7</X>
+          <Y>1</Y>
+        </Start>
+        <Comparison>PrinterNumber eq ''</Comparison>
+      </Error>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>44975641</Hash>
+    <Name>Stage Location</Name>
+    <Cursor>
+      <X>4</X>
+      <Y>1</Y>
+    </Cursor>
+    <CursorFormatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ESC%[7m</CursorFormatting>
+    <Field>
+      <Name>StageLocation</Name>
+      <FieldMax>14</FieldMax>
+      <MaskField>false</MaskField>
+      <SaveField>true</SaveField>
+    </Field>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m阶段位置%ENTER%
+%ENTER%
+位置:%ENTER%
+%ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m              %ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+%ENTER%
+%ESC%[0;32;40m%ESC%[0m  F3=暂停%ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern\fprq6\fcharset134 \'cb\'ce\'cc\'e5;}{\f1\fnil\fcharset0 Consolas;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;\red0\green0\blue0;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36\'bd\'d7\'b6\'ce\'ce\'bb\'d6\'c3\f1\par%ENTER%
+\par%ENTER%
+\f0\'ce\'bb\'d6\'c3\f1 :\par%ENTER%
+\cf2\highlight1               \par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\par%ENTER%
+\cf1\highlight2   F3=\f0\'d4\'dd\'cd\'a3\par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables />
+    <ChildScreens>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>%ESC%OR</TriggerKey>
+        <ScreenRef>7727381</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>%ENTER%</TriggerKey>
+        <ScreenRef>31242079</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+    </ChildScreens>
+    <Errors>
+      <Error>
+        <ClearField>true</ClearField>
+        <Message>Err - Stage cannot be blanks!           </Message>
+        <Key>%ENTER%</Key>
+        <Start>
+          <X>7</X>
+          <Y>1</Y>
+        </Start>
+        <Comparison>StageLocation eq ''</Comparison>
+      </Error>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>7727381</Hash>
+    <Name>Put Task On Hold</Name>
+    <Cursor>
+      <X>3</X>
+      <Y>1</Y>
+    </Cursor>
+    <CursorFormatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ESC%[7m</CursorFormatting>
+    <Field>
+      <Name />
+      <FieldMax>1</FieldMax>
+      <MaskField>false</MaskField>
+      <SaveField>false</SaveField>
+    </Field>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m推迟任务:  %ENTER%
+暂停?%ENTER%
+%ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m %ESC%[0;32;40m%ESC%[0m%ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern\fprq6\fcharset134 \'cb\'ce\'cc\'e5;}{\f1\fnil\fcharset0 Consolas;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;\red0\green0\blue0;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36\'cd\'c6\'b3\'d9\'c8\'ce\'ce\'f1\f1 :  \par%ENTER%
+\f0\'d4\'dd\'cd\'a3\f1 ?\par%ENTER%
+\cf2\highlight1  \cf1\highlight0\par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables>
+      <Variable>
+        <ResourceRef>ToteNumber</ResourceRef>
+        <Formatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m</Formatting>
+        <Start>
+          <X>1</X>
+          <Y>11</Y>
+        </Start>
+      </Variable>
+    </Variables>
+    <ChildScreens>
+      <ChildScreen>
+        <IsAction>true</IsAction>
+        <ActionType>ACTION_BACK</ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>n</TriggerKey>
+        <ScreenRef>25851732</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>true</IsAction>
+        <ActionType>ACTION_BACK</ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>N</TriggerKey>
+        <ScreenRef>53288078</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>Y</TriggerKey>
+        <ScreenRef>31242079</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>y</TriggerKey>
+        <ScreenRef>31242079</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>25851732</Hash>
+    <Name>ACTION_BACK</Name>
+    <Cursor>
+      <X>0</X>
+      <Y>0</Y>
+    </Cursor>
+    <CursorFormatting>
+    </CursorFormatting>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m %ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Consolas;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36  \par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables />
+    <ChildScreens>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>53288078</Hash>
+    <Name>ACTION_BACK</Name>
+    <Cursor>
+      <X>0</X>
+      <Y>0</Y>
+    </Cursor>
+    <CursorFormatting>
+    </CursorFormatting>
+    <EscapeSequence />
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Consolas;}}{\colortbl ;\red0\green224\blue25;\red0\green0\blue0;\red255\green255\blue255;\red255\green0\blue0;\red204\green0\blue255;\red0\green229\blue255;\red0\green0\blue255;\red255\green251\blue0;}\viewkind4\uc1\pard\cf1\f0\fs36  </RichTextFormat>
+    <Variables />
+    <ChildScreens>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>37327587</Hash>
+    <Name>ACTION_BACK</Name>
+    <Cursor>
+      <X>0</X>
+      <Y>0</Y>
+    </Cursor>
+    <CursorFormatting>
+    </CursorFormatting>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m %ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Consolas;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36  \par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables />
+    <ChildScreens>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>54036092</Hash>
+    <Name>Override Qty</Name>
+    <Cursor>
+      <X>2</X>
+      <Y>1</Y>
+    </Cursor>
+    <CursorFormatting>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m%ESC%[7m</CursorFormatting>
+    <Field>
+      <Name />
+      <FieldMax>1</FieldMax>
+      <MaskField>false</MaskField>
+      <SaveField>false</SaveField>
+    </Field>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m覆盖拣选数量?%ENTER%
+%ESC%[0;30;40m%ESC%[0;32;40m%ESC%[7m %ESC%[0;32;40m%ESC%[0m%ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern\fprq6\fcharset134 \'cb\'ce\'cc\'e5;}{\f1\fnil\fcharset0 Consolas;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;\red0\green0\blue0;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36\'b8\'b2\'b8\'c7\'bc\'f0\'d1\'a1\'ca\'fd\'c1\'bf\f1 ?\par%ENTER%
+\cf2\highlight1  \cf1\highlight0\par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables />
+    <ChildScreens>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>Y</TriggerKey>
+        <ScreenRef>47005386</ScreenRef>
+        <Comparison>(LocationPicking eq 'B13-02-A19')</Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>y</TriggerKey>
+        <ScreenRef>47005386</ScreenRef>
+        <Comparison>(LocationPicking eq 'B13-02-A19')</Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>true</IsAction>
+        <ActionType>ACTION_BACK</ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>n</TriggerKey>
+        <ScreenRef>60347601</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>true</IsAction>
+        <ActionType>ACTION_BACK</ActionType>
+        <IsLink>false</IsLink>
+        <TriggerKey>N</TriggerKey>
+        <ScreenRef>58332554</ScreenRef>
+        <Comparison>
+        </Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>y</TriggerKey>
+        <ScreenRef>61618214</ScreenRef>
+        <Comparison>(LocationPicking ne 'B13-02-A19')</Comparison>
+      </ChildScreen>
+      <ChildScreen>
+        <IsAction>false</IsAction>
+        <ActionType>
+        </ActionType>
+        <IsLink>true</IsLink>
+        <TriggerKey>Y</TriggerKey>
+        <ScreenRef>61618214</ScreenRef>
+        <Comparison>(LocationPicking ne 'B13-02-A19')</Comparison>
+      </ChildScreen>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>60347601</Hash>
+    <Name>ACTION_BACK</Name>
+    <Cursor>
+      <X>0</X>
+      <Y>0</Y>
+    </Cursor>
+    <CursorFormatting>
+    </CursorFormatting>
+    <EscapeSequence />
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Consolas;}}{\colortbl ;\red0\green224\blue25;\red0\green0\blue0;\red255\green255\blue255;\red255\green0\blue0;\red204\green0\blue255;\red0\green229\blue255;\red0\green0\blue255;\red255\green251\blue0;}\viewkind4\uc1\pard\cf1\f0\fs36  </RichTextFormat>
+    <Variables />
+    <ChildScreens>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>58332554</Hash>
+    <Name>ACTION_BACK</Name>
+    <Cursor>
+      <X>0</X>
+      <Y>0</Y>
+    </Cursor>
+    <CursorFormatting>
+    </CursorFormatting>
+    <EscapeSequence />
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Consolas;}}{\colortbl ;\red0\green224\blue25;\red0\green0\blue0;\red255\green255\blue255;\red255\green0\blue0;\red204\green0\blue255;\red0\green229\blue255;\red0\green0\blue255;\red255\green251\blue0;}\viewkind4\uc1\pard\cf1\f0\fs36  </RichTextFormat>
+    <Variables />
+    <ChildScreens>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+  <Screen>
+    <Hash>42824513</Hash>
+    <Name>ACTION_BACK</Name>
+    <Cursor>
+      <X>0</X>
+      <Y>0</Y>
+    </Cursor>
+    <CursorFormatting>
+    </CursorFormatting>
+    <EscapeSequence>%ESC%[0m%ESC%[H%ESC%[2J%ESC%[0;32;40m %ENTER%</EscapeSequence>
+    <RichTextFormat>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Consolas;}}%ENTER%
+{\colortbl ;\red0\green224\blue25;}%ENTER%
+\viewkind4\uc1\pard\cf1\f0\fs36  \par%ENTER%
+}%ENTER%
+</RichTextFormat>
+    <Variables />
+    <ChildScreens>
+    </ChildScreens>
+    <Errors>
+    </Errors>
+  </Screen>
+</DemoApp>

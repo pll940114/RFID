@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Location Screen</title>
+<link rel="stylesheet" type="text/css" href="css/Location.css">
+
+<script type = "text/javascript">
+//Global variables
+var part = [
+           {Item:"7462882715", Location:"M58-15-F10", Qty:5, UOM:"CS"},
+           {Item:"0037261735", Location:"F29-86-G14", Qty:10, UOM:"CS"},
+		   {Item:"1298300367", Location:"A34-40-C11", Qty:2, UOM:"EA"},
+		   {Item:"3434692745", Location:"B13-02-A19", Qty:1, UOM:"EA"},
+		   {Item:"9898312755", Location:"B24-03-D10", Qty:4, UOM:"EA"}
+           ];
+		   
+function prepareScreen()
+{
+	document.getElementById("location").focus();
+	var urlData = window.location.href;
+	var typeIndex = urlData.indexOf("&type");
+    //check for quantity
+    var urlTypeQuantity = urlData.slice(typeIndex + 6, typeIndex + 14);
+    
+    //Check for goback
+    var urlTypeGoback = urlData.slice(typeIndex + 6, typeIndex + 12);
+    
+    //Check for task
+    var urlTypeTask = urlData.slice(typeIndex + 6, typeIndex + 10);
+    
+	
+   if (urlTypeTask === "task")
+   {
+     //New task started. Populate fields.
+	 processNewTask();
+   }
+   else if (urlTypeQuantity === "quantity")
+   {
+     //Quantity sumitted. Process Input.
+	 processQuantitySubmit();
+   }
+   else if (urlTypeGoback === "goback")
+   {
+     //Go Back Pressed on the Quantity Screen.
+	 processGobackOnQtyScr();
+   }
+}	
+function processNewTask()
+{
+	var urlTaskData = window.location.href;
+	var index = urlTaskData.indexOf("=");
+	var index2 = urlTaskData.indexOf("&");
+	urlTaskData = urlTaskData.slice(index + 1,index2);
+	var itemNum = "";
+	var transactionType = "task";
+	processFieldData(itemNum, urlTaskData, transactionType);
+}
+function processQuantitySubmit()
+{
+  var urlQuantityData = window.location.href;
+  //Parse for task number.
+  var index = urlQuantityData.indexOf("&taskNumber=");
+  //Index + length of &taskNumber=
+  var remainingQuantityData = urlQuantityData.slice(index + 12);
+  
+  var index2 = remainingQuantityData.indexOf("&");
+  index = 0;
+  //Global variable - data used for go back too.
+  var taskNumberFromQtyScr = remainingQuantityData.slice(index, index2);
+  
+  //Parse for item number.
+  index = urlQuantityData.indexOf("&item=");
+  //Index + length of &item=
+  var remainingItemData = urlQuantityData.slice(index + 6);
+  
+  index2 = remainingItemData.indexOf("&");
+  index = 0;
+  //Global variable - data used for go back too.
+  var itemFromQtyScr = remainingItemData.slice(index, index2);
+  
+  var transactionType = "quantity";
+  processFieldData(itemFromQtyScr, taskNumberFromQtyScr, transactionType);
+}
+function processGobackOnQtyScr()
+{
+  var urlData = window.location.href;
+  //Extract item from goback URL.
+  var index = urlData.indexOf("?item=");
+  var index2 = urlData.indexOf("&task=");
+  var gobackItem = urlData.slice(index + 6, index2);
+  
+  //Extract task from goback URL.
+  var remainingURLData = urlData.slice(index2);
+  index = 0;
+  index2 = remainingURLData.indexOf("&type=");
+  var gobackTaskNum = remainingURLData.slice(index + 6, index2);
+  
+  var transactionType = "goback";
+  processFieldData(gobackItem, gobackTaskNum, transactionType);
+}
+function processFieldData(itemNum, urlTaskData, transactionType)
+{
+  var arrayIndex;
+		
+  switch(transactionType)
+  { 
+    case "task": 	
+      arrayIndex = 0;
+	  //alert("index is: " + parseInt(arrayIndex) + " task is: " + urlTaskData);
+	  populateFields(arrayIndex, urlTaskData);
+      break;
+    case "quantity":
+	  
+      arrayIndex = itemNumberToBeUsed(itemNum);
+	  arrayIndex++;
+	  populateFields(arrayIndex, urlTaskData);
+      break;
+	case "goback":
+	  
+      arrayIndex = itemNumberToBeUsed(itemNum);
+	  populateFields(arrayIndex, urlTaskData);
+	  break;
+	default:
+	  alert("No Valid Transaction Type!");
+	break;
+  }
+}
+function itemNumberToBeUsed(itemNum)
+{
+  var index;
+  
+  switch(itemNum)
+  {
+    case "7462882715":
+	  index = 0;
+	break;
+	case "0037261735":
+	  index = 1;
+	break;
+	case "1298300367":
+	  index = 2;
+	break;
+	case "3434692745":
+	  index = 3;
+	break;
+	case "9898312755":
+      index = 4;
+    break;	
+    default:
+    alert("Unknown part");
+    break;	
+  }
+  //alert("index returned is " + index);
+  return index;
+}
+function populateFields(arrayIndex, urlTaskData)
+{
+  //alert("populate fields");
+  document.getElementById("taskNumberOnLoc").innerHTML = urlTaskData;
+  document.getElementById("locationOnLoc").innerHTML = part[arrayIndex]["Location"];
+  document.getElementById("qtyOnLoc").innerHTML = part[arrayIndex]["Qty"];
+  document.getElementById("unitOfMeasureOnLoc").innerHTML = part[arrayIndex]["UOM"];
+  document.getElementById("itemOnLoc").innerHTML = part[arrayIndex]["Item"];
+
+  document.getElementById("taskNum").value = urlTaskData;
+  document.getElementById("quantity").value = part[arrayIndex]["Qty"];
+  document.getElementById("uomOnLoc").value = part[arrayIndex]["UOM"];
+  document.getElementById("itemNum").value = part[arrayIndex]["Item"];
+  //alert("Item Value is: " + document.getElementById("itemNum").value);	 
+  //alert("Quantity Value is: " + document.getElementById("quantity").value);	
+  //alert("Task Value is: " + document.getElementById("taskNum").value);	
+  //alert("UOM Value is: " + document.getElementById("uomOnLoc").value);	
+}
+</script>
+
+</head>
+<body onload='prepareScreen()'>
+<div id="locationScreen">
+<!--<h3 class="screenHeading">Location Screen</h3>-->
+<form action="Quantity.html" method="get">
+<!--<form>-->
+<p class="taskHeading">Task #: </p>
+<p class="taskHeadingValue"><span id="taskNumberOnLoc"></span></p>
+<p class="locHeading">Location: </p>
+<p class="locHeadingValue"><span id="locationOnLoc"></span></p>  
+<p class="itemHeading">Item: </p>
+<p class="itemHeadingValue"><span id="itemOnLoc"></span></p>
+<p class="qtyHeading">Qty: </p>
+<p class="qtyHeadingValue"><span id="qtyOnLoc"></span>  <span id="unitOfMeasureOnLoc"></span></p>
+<input type="text" class="hiddenFields" name="qty" id="quantity" size="25" maxlength="25">
+<input type="text" class="hiddenFields" name="item" id="itemNum" size="25" maxlength="25">
+<input type="text" class="hiddenFields" name="taskNumber" id="taskNum" size="25" maxlength="25">
+<input type="text" class="hiddenFields" name="unitOfMeasure" id="uomOnLoc" size="5" maxlength="5">
+<p class="scanLocationPrompt" id="scanPrompt">Scan Location:</p>
+<p class="messageLine" id="message"></p>
+<input type="text" name="loc" id="location" size="25" maxlength="25">
+<BR>
+<input type="submit" class="submitButton" id="submitLocation" value="Next">
+<BR>
+<BR>
+<a class="goBackLink" id="taskGoBackButton" href="Picking.html">Previous</a>
+</form>
+</div>
+<script type ="text/javascript">
+var buttonSubmitLocation = document.getElementById("submitLocation");
+buttonSubmitLocation.onclick = processSubmit;
+function processSubmit()
+{
+  if (document.getElementById("location").value === "")
+  {
+    document.getElementById("message").innerHTML = "Location Required"; 
+	return false;
+  }	
+  else
+  {
+    document.getElementById("location").value = document.getElementById("locationOnLoc").innerHTML;
+	return true;
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+Velocity
+Copyright (C) 2018 Ivanti
+
+Release 2.0.4
+------------------------------------------------
+Fix displaying of correct keyboard after reconnecting to ConnectPro session.
+Fix problem loading demo configuration embedded in projects.
+Added ability to specifiy a trusted certificate for Web sessions.
+Added cancel button to ConnectPro reconnect message.
+
+Release 2.0.3
+------------------------------------------------
+Added support for Datalogic Falcon X4.
+Added VT support for double high, double wide characters on the native screen.
+Added support for locking display in reverse portrait and reverse landscape modes.
+Added WiFi info to the session details dialog.
+Added screen resolution information to the session details.
+Added support for Point Mobile PM550.
+Removed option for deleting host profiles that were not created in the Velocity Client.
+Added option for web session to use proxy server.
+Changed picklist values for Zebra scanner.
+Fix for connections timing out to some SSH servers.
+Fixed application crashing when continuous scanning was triggered by software keyboard.
+Fix View.toast() during SpeechResult event.
+Added Out Of Range handling for web emulation when connected to WiFi network.
+Added support for SSH private keys that are in OpenSSH or ssh.com format.
+Added support for multiple web sessions.
+
+Release 2.0.2
+------------------------------------------------
+Fix 3270 scanning performance. 
+
+Release 2.0.1
+------------------------------------------------
+Removed Korean localization.
+Fixed defect where docking while a keyboard is showing will make the keyboard disappear.
+Added scripting APIs: Disconnect a session using Session.disconnect() and Add a dialog prompt with button options using Prompt.promptOptions().
+Extended API for web session using Settings.set() to enable/disable the home, forward, and back buttons on the context menu.
+Added support for IDA commands: IDA_SESSION_DISCONNECT, IDA_SESSION_DISCONNECT_PROMPT, IDA_HOME_ENABLE, IDA_HOME_DISABLE, IDA_FORWARD_ENABLE, IDA_FORWARD_DISABLE, IDA_BACK_ENABLE, & IDA_BACK_DISABLE.
+Fixed a defect where Honeywell CK75 long-range scanner did not get disabled.
+Added support for modifying ConnectPro addresses and ports in preconnect event.
+Added ability to change Voice properties through scripting.
+Added scripting APIs: Device.getDeviceSerial(), Device.getDeviceModel(), Device.getDeviceManufacturer(), Device.getSystemProperty().
+Added Global Preferences for Password, Max Sessions, and Hide Exit.
+Added possibility for hiding toolbar and matching keys to toggle keyboard and menus visibility.
+Added support for Cognex MX-1000 scanner.
+Added API to read external files.
+Added possibility to accept unknown SSH host keys automatically or by prompting.
+Added refreshing host list every 10 seconds base on content of com.wavelink.velocity folder.
+Added support for Datalogic Skorpio X4 devices.
+
+Release 2.0.0
+------------------------------------------------
+Added support for text alignment in elements in Modern Theme in Velocity Client
+Added scripting API for getting the WiFi MAC Network.getWifiMACAddress().
+Deprecated scripting API Device.getWifiIPAddress(). Moved to Network.getWifiIPAddress().
+Added scripting API to intercept escape sequences Network.registerForEscapeSequence(), and Network.deregisterForEscapeSequence().
+Added ability to capture screens from session.
+Rapid Modernization has been implemented.
+Content Injection implemented to convert screen text to images.
+Added ability to import custom CSS for screens.
+Added support for Panasonic FZ-N1 device.
+New API is available for changing keyboards.
+Added support for having two SSH keys.
+Fixed problem processing meta tags that start with "onKey" but are not followed by only digits.
+
+Release 1.2.112
+------------------------------------------------
+Fixed hanging application when wifi is turned off while using ConnectPro
+Added support for full-size external keyboards.
+
+Release 1.2.111
+------------------------------------------------
+Added support for customized foreground and background colors in Native Mode in Velocity Client 
+Added language support for Thai.
+Fix predictive mode for some double wide punctuation used in Japanese.
+Fix crash in predictive to show a error message instead of crashing.
+Updated to use Zebra EMDK barcode API. Combined Zebra scanner profiles.
+
+Release 1.2.110
+------------------------------------------------
+Fix for VT Answerback when using Session Persistence Server (ConnectPro).
+
+Release 1.2.109
+------------------------------------------------
+Fixed connection lost issue with Session Persistence Server (ConnectPro) and Velocity.
+Added support for WLS script hook.
+Added scripting persistent storage APIs.
+Added XWAIT indication for 5250 and 3270 host system delay.
+Added support for new Zebra scanner settings.
+Added ability to lock down modern or native mode.
+Fixed spacing for line drawing characters.
+Fixed send check digit for EAN-13 on Honeywell devices.
+Added ability to change host profile options before connection through scripting.
+Added preconnect scripting event in "beforeSession" scope.
+Added Prompt.prompt() scripting API.
+Added Device.getWifiIPAddress() scripting API.
+Added View.toast() scripting API.
+Fixed TE native mode missing text for some screens.
+Added support for new permission management in Android Marshmallow and above.
+
+Release 1.2.108
+------------------------------------------------
+Updated SSL/TLS to version Xamarin Native TLS 1.2.
+Added SSL certificate to host profile for host validation. End user is no longer allowed to approve any other certificates.
+
+Release 1.2.107
+------------------------------------------------
+Added configurable back and forward screen navigation commands for VT and XTERM host profiles.
+Added Localization support.
+Fix for resolving identical matching phrases in Context Menu Items across templates.
+Fixed issue returning symbology type from scanner processed meta tag.
+Added transparent keyboard support.
+Added ability to disable screen panning in TE profiles while in native mode.
+Added scanner and keyboard support for Honeywell CN75,CK75.
+Added support for font sizes between 2 and 400 for components.
+Update to Ivanti icons and images.
+Added launch on startup option.
+Added scripting API to control LED and vibration on supported devices.
+
+Release 1.2.106
+------------------------------------------------
+Fix native mode keyboard is hidden with each key press.
+Added native theme font size.
+
+Release 1.2.105
+------------------------------------------------
+Fix for web sessions to no longer save form data.
+
+Release 1.2.104
+------------------------------------------------
+Added Speakeasy Speech to Text and Text to Speech voice support for TE projects.
+Speakeasy voice projects support Bluetooth, NFC or cabled headsets.
+Added ability to specify scope when linking a script.
+Added template scope. Use the format @templateName.
+Added field scope. Use the format @templateName:componentId.
+Added support for x86 processors using separate APK.
+Scanner is disabled when connection error status is shown.
+Added ability to disable pinch\zoom.
+Fix for 3279-2-E negotiation.
+Added ability to use friendly name as workstation ID.
+Projects now default to Native Mode.
+Added support for Panasonic devices. Scanning support for Panasonic requires Wedge in Intent mode.
+Added support for Bluebird devices.
+
+Release 1.2.103
+------------------------------------------------
+Added LU Name support for 3270.
+
+Release 1.2.102
+------------------------------------------------
+Fixed crash resulting from unsupported IDAs.
+
+Release 1.2.101
+------------------------------------------------
+Fix to allow system to process any keys with the keycode of KEYCODE_UNKNOWN.
+Added Session Details dialog to the application menu which shows the current template name applied in the console or URL of the current web screen.
+Added ability to use file:/// url format for the Host Address.
+Added support for providing a html file in the project resources and pointing to it from the Host Address. 
+Added support for Honeywell Android devices (CT50, CN51, Dolphin D70e…).
+Added support for running in native green screen mode 100% of the time.
+Fixed Failed to reconnect host when "Terminate ConnectPro Session" is set as "Never".
+Fixed a problem with Picklist mode on the TC8000.
+Fixed issues logging into SAP ITSMobile in web profiles.
+Fixed cookies and caching in web profiles.
+Save screen state when backgrounding web profiles.
+Added support for Oracle SIM host connections.
+Fixed an issue where scanning a screen with no input field would crash the app.
+Fixed an issue where the cursor could get hidden under the footer element.
+Support SSH telnet negotiation strings.
+Fixed a problem where the keyboard would appear and disappear in some circumstances.
+
+Release 1.2.100
+------------------------------------------------
+Added a general keyboard visibility setting that includes options for show, hide, or disable.
+Added the ability to launch an external app and return an optional value.
+Added support for custom Telnet negotiation string.
+Fixed an issue where Velocity would lock up when scanning into a non-scannable field.
+Added the ability for key macros to invoke scripts. Example: {script:Device.Beep(400, 200, 200)}
+Added the ability for key macros to have pauses. Example: abc{pause:1000}{enter}
+Added support for Datalogic DL-Axist.
+Added support for non-Zebra Android devices.
+Dropped Jelly Bean support. Currently supporting KitKat and above.
+
+Release 1.2.6
+------------------------------------------------
+Added escape sequences for MAC address.
+
+Release 1.2.5
+------------------------------------------------
+Fixed an issue regarding the playing of custom beep sounds via a script.  After a beep was played a certain number of times no more sounds would play.
+Changed %MAC% tag to insert a MAC adress without ":" and added %MAC:% to return insert with ":"
+
+Release 1.2.4
+------------------------------------------------
+Added support for beep replacement using audio resources in scripts.
+Fixed an issue where Velocity would crash when launching a session after waking the device in certain circumstances.
+
+Release 1.2.2
+------------------------------------------------
+Added custom user-agent string functionality for Web projects. Strings must conform to RFC standards for user-agent strings. 
+Supported tags are:
+- "%ESN%"
+- "%IMEI%"
+- "%MAC%"
+- "%IP%"
+- "%MODEL%"
+- "%MANUFACTURER%"
+
+Release 1.2.1
+------------------------------------------------
+Added an indicator to mark a host profile that is currently used in an active session.
+Added a dialog to launch another session with the same host profile.
+Added a dialog to re-enter an active session by selecting an active host profile.
+Using the app launcher will now enter into the last active session if a session is active and the app was previously closed.
+
+Release 1.2.0
+------------------------------------------------
+Added Scripting.
+-Added Oversized Scanning script for 5250 and 3270.
+Added Keyboard Height option to host profiles on the Console to set a percentage of screen to use for the keyboard.
+Added Server Language option to host profiles to select code page.
+Changed some key code values to use Unicode private use area.
+-Keycodes of format 00XX not changed
+-Keycodes of format XX00 changed to E0XX
+-Keycodes of format CXXX changed to EXXX
+-Keycodes for Euro sign, bracket, broken bar, cent sign, pound sign, currency sign, and Yen sign were changed to their Unicode values.
+Added key macro capabilities to Menu Up Command, Menu Down Command, Hardware Back Button Command, Shortcut Commands, Menu Item Commands, and virtual keyboard keys.
+-Macros can consist of any combination of the following:
+--Literal ASCII characters that are sent verbatim "Abc123"
+--Hex keys codes in the format "{hex:0001}"
+--Named function keys "{F1}"
+--Named control keys "{ctrl-x}"
+--Other named keys "{enter}" "{send}" "{tab}"
+--Scanner soft trigger "{special:scan}"
+--Auto-enter value "{AutoEnter}"; if Auto Carriage Return option is enabled it will send an enter to the host.
+Fixed issue when scanning 2D barcodes would duplicate the barcode twice when scanned.
+Fixed an issue where scanning would not work when using profile0 with no Intent configured.
+Added Dynamic Tables.
+Scanning of 2D barcodes does not send a timing mark in VT.
+VT Answerback sends MAC address in uppercase.
+Added support for non-US locales.
+Fixed the back tab for 5250 keyboard. There is a known issue on MC92 Android: The '|<-' on the 5250 keyboard works as tab.
+
+Release 1.0.1
+------------------------------------------------
+Added a span container for screen elements.
+Added a table container for screen elements.
+Added cursor zones for screen matching.
+Added VT Scan Terminator setting.
+Added VT Answerback.
+Added IBM Workstation ID and Retry Workstation ID.
+Added Autologin feature for VT and IBM hosts.
+Added option to Disable Predictive Formatting.
+Updated default styles for elements and changed margins between elements.
+Fix for Defect: Illumination Mode isn't enabled by default in Velocity
+
+Added ability to change embedded demo server script through an external file.
+Does not create a DataWedge profile if Data Capture is disabled.
+Demo service only listens on loopback adapter.
+Password is required for on device Host Profile configuration.
+Fix for Defect: Client uses the feedback of the default style instead of the key's style.
+Fix for Defect: Beeping after scan is broken.
+Fix for Defect: Velocity crashes immediately after you try to launch it on a TC55 KitKat GMS device
+Updated Xamarin to 3.11.
+
+Release 1.0.0
+------------------------------------------------
+Initial Release

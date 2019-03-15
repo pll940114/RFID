@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Staging</title>
+<link rel="stylesheet" type="text/css" href="css/Staging.css">
+<script type = "text/javascript">
+function prepareScreen()
+{
+  document.getElementById("stageLocation").focus();
+}
+</script>
+</head>
+<body onload='prepareScreen()'>
+<h2 class="screenHeading">Stage Location</h2>
+<form>
+<p class="messageLine" id="message"></p>
+<p class="scanLocationPrompt">Location:</p>
+<input type="text" name="stageLoc" id="stageLocation" size="25" maxlength="25">
+<BR><BR>
+<input type="submit" class="submitButton" id="submitTask" value="Next">
+<BR><BR>
+<a class="goBackLink" id="onholdButton" href="Onhold.html?Onhold=Staging">Onhold</a>
+</form>
+<script type ="text/javascript">
+var buttonSubmit = document.getElementById("submitTask");
+buttonSubmit.onclick = callTaskComplete;
+function callTaskComplete()
+{
+  if (document.getElementById("stageLocation").value === "")
+  {
+    document.getElementById("message").innerHTML = "Stage Location Required";
+	return false;
+  }
+  else
+  {
+    //alert("Task Complete. Press Enter.");
+    window.location.href = "WMS_Menu.html";
+    return false;
+   }
+}
+</script>
+</body>
+</html>

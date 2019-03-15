@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Check Stores</title>
+<link rel="stylesheet" type="text/css" href="css/generic/generic.css">
+
+<script type = "text/javascript">
+//Global variables
+var locationOnHand = [
+           {Location1:"Alderwood Mall", Qty1:10, Location2:"Cascade Dr.", Qty2:4, Location3:"Westlake", Qty3:2, Location4:"Times Square", Qty4:22, Location5:"West Pine Ave.", Qty5:9, Location6:"South Jordan", Qty6:0},
+           {Location1:"Alderwood Mall", Qty1:4, Location2:"Cascade Dr.", Qty2:7, Location3:"Westlake", Qty3:9, Location4:"Times Square", Qty4:14, Location5:"West Pine Ave.", Qty5:1, Location6:"South Jordan", Qty6:3},
+		   {Location1:"Alderwood Mall", Qty1:12, Location2:"Cascade Dr.", Qty2:14, Location3:"Westlake", Qty3:4, Location4:"Times Square", Qty4:8, Location5:"West Pine Ave.", Qty5:0, Location6:"South Jordan", Qty6:6},
+		   {Location1:"Alderwood Mall", Qty1:20, Location2:"Cascade Dr.", Qty2:15, Location3:"Westlake", Qty3:4, Location4:"Times Square", Qty4:19, Location5:"West Pine Ave.", Qty5:10, Location6:"South Jordan", Qty6:9},
+		   {Location1:"Alderwood Mall", Qty1:4, Location2:"Cascade Dr.", Qty2:2, Location3:"Westlake", Qty3:6, Location4:"Times Square", Qty4:3, Location5:"West Pine Ave.", Qty5:2, Location6:"South Jordan", Qty6:0}
+           ];
+var arrayIndex;
+
+function prepareScreen()
+{
+    var urlData = window.location.href;
+	
+	var index = urlData.indexOf("=");
+	var arrayIndex = urlData.slice(index + 1);
+	
+    document.getElementById("location1").innerHTML = locationOnHand[arrayIndex]["Location1"];
+	document.getElementById("qty1").innerHTML = locationOnHand[arrayIndex]["Qty1"];
+	document.getElementById("location2").innerHTML = locationOnHand[arrayIndex]["Location2"];
+	document.getElementById("qty2").innerHTML = locationOnHand[arrayIndex]["Qty2"];	
+	document.getElementById("location3").innerHTML = locationOnHand[arrayIndex]["Location3"];
+	document.getElementById("qty3").innerHTML = locationOnHand[arrayIndex]["Qty3"];
+	document.getElementById("location4").innerHTML = locationOnHand[arrayIndex]["Location4"];
+	document.getElementById("qty4").innerHTML = locationOnHand[arrayIndex]["Qty4"];	
+	document.getElementById("location5").innerHTML = locationOnHand[arrayIndex]["Location5"];
+	document.getElementById("qty5").innerHTML = locationOnHand[arrayIndex]["Qty5"];
+	document.getElementById("location6").innerHTML = locationOnHand[arrayIndex]["Location6"];
+	document.getElementById("qty6").innerHTML = locationOnHand[arrayIndex]["Qty6"];	
+
+    var hrefNode = document.getElementById("goToPartsOnHand");
+    hrefNode.setAttribute("href", "PartsOnHand.html?ArrayIndex=" + arrayIndex + "&type=goback");
+	
+	document.getElementById("goToMainMenu").focus();
+}
+</script>
+</head>
+<body onload='prepareScreen()'>
+<div id="itemLookup">
+<table>
+<tr><th class='top-row' scope='col'>Location</th><th class='top-row' scope='col'>OnHand</th></tr>
+<tr><td id='location1'></td><td class='right-column' id='qty1'></td></tr>
+<tr><td id='location2'></td><td class='right-column' id='qty2'></td></tr>
+<tr><td id='location3'></td><td class='right-column' id='qty3'></td></tr>
+<tr><td id='location4'></td><td class='right-column' id='qty4'></td></tr>
+<tr><td id='location5'></td><td class='right-column' id='qty5'></td></tr>
+<tr><td id='location6'></td><td class='right-column' id='qty6'></td></tr>
+</table>
+<input type="button" class="submitButton" value="Main Menu" id="goToMainMenu">
+<a class='goBackLink' id='goToPartsOnHand' href='WMS_Menu.html'>Previous</a>
+</div>
+<script type ="text/javascript">
+var menuButton = document.getElementById("goToMainMenu");
+menuButton.onclick = callMenu;
+function callMenu()
+{
+    window.location.href = "WMS_Menu.html";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+.taskHeadingPrompt {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+}
+.taskHeadingValue {
+  position: absolute;
+  top: 0px;
+  left: 80px;
+}
+.selectPrinterPrompt {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  background-color: black;
+  color: white;
+}
+.printerButtons {
+    background-color: #E0E1E8 /* light grey */;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+}
+#printer1Button {
+  position: absolute;
+  top: 65px;
+  left: 20px;
+  }
+#printer2Button {
+  position: absolute;
+  top: 65px;
+  left: 170px;
+  }
+#printer3Button {
+  position: absolute;
+  top: 110px;
+  left: 20px;
+  }
+#printer4Button {
+  position: absolute;
+  top: 110px;
+  left: 170px;
+  }   
+.onHoldLink {
+  position: absolute;
+  top: 155px;
+  left: 20px;
+}

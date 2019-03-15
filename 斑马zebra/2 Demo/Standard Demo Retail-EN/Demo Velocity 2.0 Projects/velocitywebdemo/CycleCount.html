@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Cycle Count Screen</title>
+<link rel="stylesheet" type="text/css" href="css/generic/generic.css">
+
+<script type = "text/javascript">
+
+//Global variables
+var submitStatus;
+var arrayIndex;
+var part = [
+           {Item:"7462882715", Desc:"Creamed Corn", Qty:5, UOM:"CS"},
+           {Item:"0037261735", Desc:"French Cut Green Beans", Qty:10, UOM:"CS"},
+	   {Item:"1298300367", Desc:"Petite Peas", Qty:2, UOM:"EA"},
+	   {Item:"3434692745", Desc:"Diced Carrots", Qty:1, UOM:"EA"},
+	   {Item:"9898312755", Desc:"Diced Tomatoes", Qty:4, UOM:"EA"}
+           ];
+		   
+function prepareScreen()
+{
+  //Hide Cycle Count Submit button.
+  document.getElementById("submitCycleCount").style.visibility = "hidden";
+  var urlData = window.location.href;
+  //alert("prepare get url:" + urlData);
+  var index1 = urlData.indexOf("ArrayIndex=") + 11;
+  //alert("index1 is: " + index1);
+  var index2 = urlData.indexOf("&State=");
+  //alert("index2 is: " + index2);
+  var index3 = urlData.indexOf("&submitStatus=");
+  //alert("index3 is: " + index3);
+  var index4 = urlData.indexOf("&Msg=");
+  //alert("index4 is: " + index4);
+  arrayIndex = parseInt(urlData.slice(index1, index2));
+  //alert("array index: " + arrayIndex);
+  var transactionState = urlData.slice(index2 + 7, index3);
+  //alert("transaction state: " + transactionState);
+  submitStatus = urlData.slice(index3 + 14, index4);
+  //alert("submitStatus: " + submitStatus);
+  var msg = urlData.slice(index4 + 5);
+  //alert("msg: " + msg);
+  
+  switch(msg)
+  {
+    case "Accepted":
+      document.getElementById("message").style.color = "green";
+      document.getElementById("message").innerHTML = "Count Accepted";
+    break;
+    case "noQty":
+      document.getElementById("message").style.color = "red";
+      document.getElementById("message").innerHTML = "No Quantity Entered!"; // No quantity entered on first pass.
+    break;
+    case "noItem":
+      document.getElementById("message").style.color = "red";
+      document.getElementById("message").innerHTML = "No Item Number Entered!";
+    break;
+    case "noMsg":
+      document.getElementById("message").innerHTML = "";
+    break;
+    default:
+      document.getElementById("message").innerHTML = "";
+  }
+  
+  //Maximum available items in object array reached. Transaction completed.
+  if (arrayIndex === 5)
+  {
+    document.getElementById("message").style.color = "green";
+    document.getElementById("message").innerHTML = "Transaction Complete!";
+    arrayIndex = 0;
+    document.getElementById("itemNumber").focus();
+    return;
+  }
+  
+  // This logic is processed after Item # is entered.
+  if (transactionState === "Qty")
+  {
+    document.getElementById("actualQuantity").focus();
+    //alert("qty state");
+    populateFields();
+  }
+  //This logic is processed when the Item # needs to be entered.
+  else
+  {
+    document.getElementById("itemNumber").focus();
+    //alert("item state");
+  }
+}
+function clearFields()
+{
+  //This funtion clears the fields after a cycle count transaction is performed.
+  document.getElementById("itemDesc").innerHTML = "";
+  document.getElementById("itemNumber").value = "";
+  document.getElementById("actualQuantity").value = "";
+}
+function populateFields()
+{ 
+  //alert("populateFields");
+  
+  document.getElementById("itemDesc").innerHTML = part[arrayIndex]["Desc"];
+  document.getElementById("itemNumber").value = part[arrayIndex]["Item"];
+  //document.getElementById("onHandSystem").innerHTML = part[arrayIndex]["Qty"];
+  //document.getElementById("unitOfMeasure").innerHTML = part[arrayIndex]["UOM"];
+  
+  //If item number is entered, the focus goes to the actual quantity entry.
+  if (document.getElementById("itemNumber").value.length > 0)
+    document.getElementById("actualQuantity").focus();
+}
+
+</script>
+
+</head>
+<body onload='prepareScreen()'>
+<div id="cycleCountScreen">
+<!--<h3 class="screenHeading">Location Screen</h3>-->
+<form action="CycleCount.html" method="get">
+<h2 class="screenHeading">Cycle Count</h2>
+<p class="promptCycleDesc">Description: <b><span id="itemDesc"></span></b></p>
+<!--<p class="promptCycleOnHandSystem">On Hand (System): <b><span id="onHandSystem"></span> <span id="unitOfMeasure"></span></b></p>-->
+<p class="promptCycleItemNum">Item Number: </p>
+<input type="text" class="data1" name="itemNum" id="itemNumber" size="25" maxlength="25">
+
+<p class="promptCycleActualQty">Actual Qty: </p>
+<input type="text" class="data2" name="actualQty" id="actualQuantity" size="25" maxlength="25">
+<p class="messageLineCycleCount" id="message"></p>
+<BR>
+<input type="submit" class="submitButton" id="submitCycleCount" value="Submit">
+<BR>
+<BR>
+<a class="goBackLinkCycleCount" id="cycleGoBackButton" href="WMS_Menu.html">Previous</a>
+</form>
+</div>
+<script type ="text/javascript">
+
+var buttonSubmitCycleCount = document.getElementById("submitCycleCount");
+buttonSubmitCycleCount.onclick = processSubmit;
+
+function processSubmit()
+{ 
+  //If item number entered and quantity not yet entered.
+  if (document.getElementById("itemNumber").value.length > 0 && document.getElementById("actualQuantity").value.length === 0)
+  {
+    //Item # entered without quantity. URL passes submitStatus.
+    if (submitStatus === "Yes")
+    {
+      //alert("no qty");
+      var msg = "noQty";
+    } 
+    document.getElementById("actualQuantity").focus();
+    //Item Number was already entered but the user did not enter the quantity.
+    if (msg === "noQty")
+      window.location.href = "CycleCount.html?ArrayIndex=" + arrayIndex + "&State=Qty&submitStatus=Yes&Msg=noQty";
+    else
+      window.location.href = "CycleCount.html?ArrayIndex=" + arrayIndex + "&State=Qty&submitStatus=Yes&Msg=noMsg";
+    return false;
+  }
+  //If item number and quantity entered.
+  if ((document.getElementById("itemNumber").value.length > 0) && (document.getElementById("actualQuantity").value.length > 0))
+  {
+    //alert("item number and quantity entered");
+    clearFields();
+    arrayIndex++;
+    window.location.href = "CycleCount.html?ArrayIndex=" + arrayIndex + "&State=none&submitStatus=No&Msg=Accepted";
+    return false;
+  }
+  //If item number was not entered.
+  if (document.getElementById("itemNumber").value.length === 0)
+  {
+    //alert("no item");
+    window.location.href = "CycleCount.html?ArrayIndex=" + arrayIndex + "&State=none&submitStatus=No&Msg=noItem";
+    return false;
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+body {
+  background-color: #F6F6F6; /* Creme Color */
+  }
+.hiddenFields {
+  visibility: hidden;
+  font-size: .1em;
+  position: absolute;
+  top: 0;
+  left: 300px;
+}
+/* screenHeading not currently used */
+.screenHeading {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  color: blue;
+  }
+.taskHeading {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  }
+.taskHeadingValue {
+  position: absolute;
+  top: 0px;
+  left: 80px;
+  }
+.locHeading {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  color: black;
+  }
+.locHeadingValue {
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  color: black;
+  }
+ .itemHeading {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  color: black;
+  }
+.itemHeadingValue {
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  color: black;
+  }
+.qtyHeading {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  color: black;
+  }
+.qtyHeadingValue {
+  position: absolute;
+  top: 60px;
+  left: 80px;
+}
+  .qtyPrompt {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  color: black;
+  }
+  .messageLine {
+    position: absolute;
+	top: 80px;
+	left: 10px;
+	color: red;
+	font-weight: 900;
+	}
+  .shortPickPromptYes {
+    position: absolute;
+	top: 95px;
+	left: 130px;
+	color: red;
+	font-weight: 900;
+	}
+  .shortPickPromptNo {
+    position: absolute;
+	top: 95px;
+	left: 175px;
+	color: red;
+	font-weight: 900;
+	}
+input#quantity {
+  background-color: white;
+  color: black;
+  border: 5px black solid;
+  position: absolute;
+  top: 140px;
+  left: 20px;
+  }
+.submitButton {
+  position: absolute;
+  top: 180px;
+  left: 20px;
+  }
+.closeButton {
+  position: absolute;
+  top: 180px;
+  left: 80px;
+  }
+ .goBackLink {
+  position: absolute;
+  top: 180px;
+  left: 140px;
+  color: #008CBA; /* blue */
+  }
+  span {
+    font-weight: 900;
+	color: black;
+	}
+#qtyOnQty {
+  background-color: black;
+  color: white;
+  }
+#unitOfMeasureOnQty {
+  background-color: black;
+  color: white;
+  }

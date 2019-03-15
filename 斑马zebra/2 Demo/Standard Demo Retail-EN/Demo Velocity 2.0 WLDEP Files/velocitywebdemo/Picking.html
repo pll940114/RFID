@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Outbound Picking</title>
+<link rel="stylesheet" type="text/css" href="css/Picking.css">
+<script type = "text/javascript">
+function prepareScreen()
+{
+  document.getElementById("taskNumber").focus();
+  document.getElementById("transactionTypeOnTask").value = "task";
+}
+</script>
+</head>
+<body onload='prepareScreen()'>
+<h2 class="screenHeading">Outbound Picking</h2>
+<form action="Location.html" method="get">
+<p class="messageLine" id="message"></p>
+<p class="scanTaskPrompt">Scan Task #:</p>
+<input type="text" name="taskNum" id="taskNumber" size="25" maxlength="25">
+<BR><BR>
+<input type="submit" class="submitButton" id="submitTask" value="Next">
+<BR><BR>
+<a class="goBackLink" id="taskGoBackButton" href="WMS_Menu.html">Previous</a>
+<input type="text" class="hiddenFields" name="type" id="transactionTypeOnTask" size="25" maxlength="25">
+</form>
+<script type ="text/javascript">
+var buttonSubmitTask = document.getElementById("submitTask");
+buttonSubmitTask.onclick = callSubmitTask;
+var buttonTaskGoBack = document.getElementById("taskGoBackButton");
+buttonTaskGoBack.onclick = callTaskGoBack;
+function callSubmitTask()
+{
+  if (document.getElementById("taskNumber").value === "")
+  {
+    document.getElementById("message").innerHTML = "Task Number Required";
+	return false;
+  }
+}
+function callTaskGoBack()
+{
+  //alert("TaskGoBack");
+  window.location.href = "WMS_Menu.html";
+}
+</script>
+</body>
+</html>

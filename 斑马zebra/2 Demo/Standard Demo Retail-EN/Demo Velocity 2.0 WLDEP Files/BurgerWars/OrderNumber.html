@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+	<!-- <!DOCTYPE html> is always on the top line -->
+
+<html Lang="en">
+	<!-- The html tag indicates that everything between <html> and </html> -->  
+	<!-- is code that conforms to the standards of the type of HTML -->
+	<!-- dictated by the doctype declaration – in this case HTML5 -->
+
+<head>
+	<!-- While the contents of the head tag displays --> 
+	<!-- little to human viewers it's important to the bots. --> 
+	<!-- Search engines have crawlers "Googlebot" that constantly --> 
+	<!-- surf the net following links from one site to another --> 
+	<!-- collecting and indexing everything they find. --> 
+	<!-- Google has an algorithm that then decides which pages are --> 
+	<!-- most relevant to search terms. -->
+
+<meta charset="utf-8">	
+<meta name="description" content="Order App for Out N About Burgers - The Worlds Best Burgers">
+	<!-- The former tells the browser what type of letters -->
+	<!-- the page is written in. If your web site is in a language --> 
+	<!-- other than English be careful to use the correct charset. --> 
+	<!-- If your page is in plain old vanilla English just copy --> 
+	<!-- and paste <meta charset="UTF-8"> just above the title*, --> 
+	<!-- and with any luck you'll never have to think about it again. -->
+	<!-- 								  -->
+	<!-- The latter sometimes shows up in search results and it can help in SEO. -->
+
+<link href="BurgerWars.css" rel="stylesheet" type="text/css">
+	<title> Out N About Burgers - Order Number </title>
+
+<script>
+ 
+var nRandomNumber
+var nRandomDollarAmt
+ 
+//----------------Generate Random Number----------------------------
+ 
+               function GenerateRandomNumber() {
+                              nRandomNumber = Math.floor((Math.random() * 1000000) + 1);
+                              return nRandomNumber
+               }
+              
+//---------------END Generate Random Number--------------------------
+
+ 
+//----------------Generate Random Dollar Amount----------------------------
+ 
+               function GenerateDollarNumber() {
+                              nRandomDollarAmt = Math.floor((Math.random() * 10) + 1);
+							  nRandomDollarAmt += 10.79
+                              return nRandomDollarAmt
+               }
+              
+//---------------END Generate Random Dollar Amount--------------------------
+
+</script>
+ 
+</head>
+<body>
+ 
+<!-- This is the heading -->
+<!-- This is a comment -->
+ 
+<div id="centerDoc">
+<h1>Order Details</h1>
+		<IMG HEIGHT="115" WIDTH="205" SRC="hamburger.jpg">
+	<h2>Reciept #: <div id="orderNum"></div> </h2>
+	<h2>Price  : <div id="dollarAmt"></div> </h2>
+
+	<script>
+		document.getElementById("orderNum").innerHTML = GenerateRandomNumber();
+		document.getElementById("dollarAmt").innerHTML = GenerateDollarNumber();
+	</script>
+	<br>
+<!--	<input id="NextOrder" type="button" value="Next Order" onclick="location.href='OrderPage.html'" /> -->
+	<br>
+</div>
+	<div id="navigation">
+		<h3>Options</h3>
+	<input id="OrderNumNext" type="button" value="      Order      " onclick="location.href='OrderPage.html'" />
+	<p></p>
+	<input id="OrderNumExit" type="button" value="        Exit       " onclick="location.href='index.html'" />
+	</div>
+</body>
+</html>

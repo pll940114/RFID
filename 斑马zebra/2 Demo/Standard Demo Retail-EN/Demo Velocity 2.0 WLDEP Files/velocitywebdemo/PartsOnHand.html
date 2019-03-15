@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Part On Hand</title>
+<link rel="stylesheet" type="text/css" href="css/generic/generic.css">
+
+<script type = "text/javascript">
+//Global variables
+var arrayIndex;
+var part = [
+           {Part:"7462882715", Description:"Air Filter 2010 Highlander", Qty:5, Price:"20.00"},
+           {Part:"0037261735", Description:"Cabin Air Filter 2010 Pilot", Qty:10, Price:"40.00"},
+		   {Part:"1298300367", Description:"brake light replacement", Qty:4, Price:"6.00"},
+		   {Part:"3434692745", Description:"head light 2014 Sentra", Qty:2, Price:"120.00"},
+		   {Part:"9898312755", Description:"20 inch wiper blade", Qty:10, Price:"5.00"}
+           ];
+function prepareScreen()
+{
+  var urlData = window.location.href;
+  var index = urlData.indexOf("&type");
+  
+  var remainingURLData = urlData.slice(index + 6);
+  
+  if (remainingURLData === "goback")
+  {
+    arrayIndex = urlData.slice(index - 1, index);
+  }
+  else
+  {  
+    var bigDecimal = Math.random();
+    var fullNum = (bigDecimal * 5);
+    arrayIndex = Math.floor(fullNum);
+    
+  }
+  
+  document.getElementById("partNum").value = part[arrayIndex]["Part"];
+  document.getElementById("descriptionData").innerHTML = part[arrayIndex]["Description"];
+  document.getElementById("storePriceData").innerHTML = part[arrayIndex]["Price"];
+  document.getElementById("storeOnHand").innerHTML = part[arrayIndex]["Qty"];	
+  //alert(part[arrayIndex]["Description"]);
+  document.getElementById("checkStores").focus();
+}
+</script>
+<body onload='prepareScreen()'>
+<h2 class='screenHeading'>Item Lookup</h2>
+<p class='messageLine' id='message'></p>
+<p class='prompt1'>Part:</p><input type='text' name='partNumber' id='partNum' size='25' maxlength='25' readonly>
+<p class='prompt2'>Description:</p>
+<p class='data2' id='descriptionData'></p><BR>
+<p class='prompt3'>Store Price:</p><p class='data3' id='storePriceData'></p>
+<p class='prompt4'>Onhand:</p><p class='data4' id='storeOnHand'></p>
+<input type='submit' class='submitButton' id='checkStores' value='Check Stores'>
+<a class='goBackLink' id='goToMainMenu' href='ItemLookup.html'>Previous</a>
+<script type ="text/javascript">
+var checkStoresButton = document.getElementById("checkStores");
+checkStoresButton.onclick = callCheckStores;
+function callCheckStores()
+{  
+    window.location.href = "CheckStores.html?ArrayIndex=" + arrayIndex;
+}
+</script>
+</body>
+</html>

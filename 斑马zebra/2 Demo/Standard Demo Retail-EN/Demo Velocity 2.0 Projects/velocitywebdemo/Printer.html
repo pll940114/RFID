@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Select Printer</title>
+<link rel="stylesheet" type="text/css" href="css/Printer.css">
+<script type = "text/javascript">
+function prepareScreen()
+{
+	var urlData = window.location.href;
+	
+	var index = urlData.indexOf("=");
+	var urlTaskData = urlData.slice(index + 1);
+	
+	document.getElementById("taskNumberOnPrinter").innerHTML = urlTaskData;
+	var hrefNode = document.getElementById("printerOnHoldButton");
+    hrefNode.setAttribute("href", "Onhold.html?Onhold=Printer&taskNum=" + urlTaskData);
+}
+</script>
+</head>
+<body onload='prepareScreen()'>
+<p class="taskHeading">Task #: </p>
+<p class="taskHeadingValue"><span id="taskNumberOnPrinter"></span></p>
+<p class="selectPrinterPrompt">Select Printer:</p>
+<input type="button" class="printerButtons" value="Printer 1  >" id="printer1Button">
+<input type="button" class="printerButtons" value="Printer 2  >" id="printer2Button">
+<input type="button" class="printerButtons" value="Printer 3  >" id="printer3Button">
+<input type="button" class="printerButtons" value="Printer 4  >" id="printer4Button">
+<!--<BR><BR>
+<input type="submit" class="submitButton" id="submitTask" value="Submit">-->
+<BR><BR>
+<a class="onHoldLink" id="printerOnHoldButton" href="Onhold.html?Onhold=Printer">On Hold</a>
+<script type ="text/javascript">
+var buttonPrinter1 = document.getElementById("printer1Button");
+var buttonPrinter2 = document.getElementById("printer2Button");
+var buttonPrinter3 = document.getElementById("printer3Button");
+var buttonPrinter4 = document.getElementById("printer4Button");
+buttonPrinter1.onclick = callStaging;
+buttonPrinter2.onclick = callStaging;
+buttonPrinter3.onclick = callStaging;
+buttonPrinter4.onclick = callStaging;
+function callStaging()
+{
+  window.location.href = "Staging.html";
+}
+</script>
+</body>
+</html>

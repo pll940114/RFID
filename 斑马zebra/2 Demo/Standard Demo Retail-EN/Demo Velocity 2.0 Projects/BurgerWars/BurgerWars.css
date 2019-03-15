@@ -1,0 +1,90 @@
+/* Generic Selectors */
+
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	color: #333333;	
+	background-color: #FFFFFF; */	
+/*	background-color: #F9F9F9; */
+	/*margin: 0 0 0 0; top right bottom left*/	
+}
+
+p {
+	width: 80%;
+}
+
+li {
+	list-style-type: none;
+	line-height: 150%;
+	
+}
+
+
+h1 {
+
+/*	font-family: Georgia, "Times New Roman", Times, serif; */
+	font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif
+	font-size: 26px;
+	font-weight: bold;
+	color: #035FC1;
+}
+
+h2 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 22px;
+	font-weight: bold;
+	color: #035FC1;
+
+}
+h3{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #035FC1;
+
+}
+
+
+
+/*************************  ID's *************************/
+
+#navigation {
+	position: absolute;	
+	width: 40px;
+	height: 200px;	
+	margin-top: 50px;
+	font-weight: normal;
+}
+
+#centerDoc {
+	position: absolute;	
+	padding: 0 0 20px 100px; /*top right bottom left*/
+	margin-top: 0px;		
+}
+
+
+
+/*************************  Pseudo classes *************************/
+a:link {
+	color: Red;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+a:visited { 
+color: Red;
+text-decoration: underline;
+font-weight: bold;
+}
+
+a:hover {
+color: #000000;
+padding-bottom: 5px;
+font-weight: bold;
+text-decoration: underline;
+
+}  
+a:active { 
+color: rgb(255, 0, 102);
+font-weight: bold; 
+}

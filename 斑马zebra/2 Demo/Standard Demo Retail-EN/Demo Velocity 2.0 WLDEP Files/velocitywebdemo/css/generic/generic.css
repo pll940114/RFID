@@ -1,0 +1,140 @@
+body {
+  background-color: #F6F6F6; /* Creme Color */
+  }
+.screenHeading {
+  position: fixed;
+  top: 0;
+  left: 20px; 
+  color: black; 
+  }
+.messageLine {
+  position: fixed;
+  top: 40px;
+  left: 10px; 
+  color: red;
+  font-weight: 900;
+  }
+.prompt1 {
+  position: fixed;
+  top: 75px;
+  left: 10px;
+  color: black;
+  }
+.prompt2 {
+  position: fixed;
+  top: 100px;
+  left: 10px;
+  color: black;
+  }
+.prompt3 {
+  position: fixed;
+  top: 120px;
+  left: 10px;
+  color: black;
+  }
+.prompt4 {
+  position: fixed;
+  top: 140px;
+  left: 10px;
+  color: black;
+  }
+.data2 {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  color: purple;
+  }
+.data3 {
+  position: fixed;
+  top: 120px;
+  left: 100px;
+  color: purple;
+  }
+.data4 {
+  position: fixed;
+  top: 140px;
+  left: 100px;
+  color: purple;
+  }
+input#partNum {
+  position: fixed;
+  top: 80px;
+  left: 60px;
+  background-color: white;
+  color: black;
+  border: 5px black solid;
+  }
+.submitButton {
+  position: fixed;
+  top: 180px;
+  left: 20px;
+  }
+.goBackLink {
+  position: fixed;
+  top: 180px;
+  left: 170px;
+  }
+th.top-row {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.right-column {
+  text-align: right;
+}
+/* Cycle Count Screen Additions */
+.promptCycleDesc {
+  position: fixed;
+  top: 40px;
+  left: 10px;
+  color: black;
+  }
+.promptCycleOnHandSystem {
+  position: fixed;
+  top: 60px;
+  left: 10px;
+  color: black;
+  }
+.promptCycleItemNum {
+  position: fixed;
+  top: 90px;
+  left: 10px;
+  color: black;
+  }
+.promptCycleActualQty {
+  position: fixed;
+  top: 130px;
+  left: 10px;
+  color: black;
+  }
+input#itemNumber {
+  position: fixed;
+  top: 100px;
+  left: 120px;
+  background-color: white;
+  color: black;
+  border: 5px black solid;
+  }
+input#actualQuantity {
+  position: fixed;
+  top: 140px;
+  left: 120px;
+  background-color: white;
+  color: black;
+  border: 5px black solid;
+  }
+.messageLineCycleCount {
+  position: fixed;
+  top: 60px;
+  left: 105px; 
+  /* color: red; */
+  font-weight: 900;
+  }
+.goBackLinkCycleCount {
+  position: fixed;
+  top: 180px;
+  left: 245px;
+  }
+#itemDesc {
+  background-color: black;
+  color: white;
+}

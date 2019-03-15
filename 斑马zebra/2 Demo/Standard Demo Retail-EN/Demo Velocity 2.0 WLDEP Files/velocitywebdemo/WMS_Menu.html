@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>WMS Menu</title>
+<link rel="stylesheet" type="text/css" href="css/WMS_Menu.css">
+</head>
+<body>
+<div id="divWMSMenuHeader">
+<img class="menuTitle" src="images/Ivanti_rgb.bmp">
+<h1>WMS Menu</h1>
+</div>
+<div id="wmsMenu">
+<input type="button" class="menuButtons" value="Picking" id="pickingButton">
+<input type="button" class="menuButtons" value="Item Lookup" id="itemLookupButton">
+<input type="button" class="menuButtons" value="Cycle Count" id="cycleCountButton">
+</div>
+<script type ="text/javascript">
+var buttonPicking = document.getElementById("pickingButton");
+buttonPicking.onclick = callPicking;
+function callPicking()
+{
+  //alert("Picking");
+  window.location.href = "Picking.html";
+}
+
+var buttonItemLookup = document.getElementById("itemLookupButton");
+buttonItemLookup.onclick = callItemLookup;
+function callItemLookup()
+{
+  //alert("Item Lookup");
+  window.location.href = "ItemLookup.html";
+}
+
+var buttonCycleCount = document.getElementById("cycleCountButton");
+buttonCycleCount.onclick = callCycleCount;
+function callCycleCount()
+{
+  //alert("Cycle Count");
+  window.location.href = "CycleCount.html?ArrayIndex=0&State=none&submitStatus=No&Msg=noMsg";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Item Lookup</title>
+<link rel="stylesheet" type="text/css" href="css/generic/generic.css">
+
+<script type = "text/javascript">
+function prepareScreen()
+{
+  document.getElementById("partNum").focus();
+}
+</script>
+</head>
+<body onload='prepareScreen()'>
+<div id="itemLookup">
+<h2 class='screenHeading'>Item Lookup</h2>
+<form>
+<p class='messageLine' id='message'></p>
+<p class='prompt1'>Part:</p><input type='text' name='partNumber' id='partNum' size='25' maxlength='25'>
+<p class='prompt2'>Description:</p>
+<p class='data2' id='descriptionData'></p>
+<p class='prompt3'>Store Price:</p><p class='data3' id='storePriceData'></p>
+<p class='prompt4'>Onhand:</p><p class='data4' id='storeOnHand'></p>
+<input type='submit' class='submitButton' id='submitLookup' value='Next'>
+<a class='goBackLink' id='goToMainMenu' href='WMS_Menu.html'>Previous</a>
+</div>
+</form>
+<script type ="text/javascript">
+var submitLookupButton = document.getElementById("submitLookup");
+submitLookupButton.onclick = callLookup;
+function callLookup()
+{
+  if (document.getElementById("partNum").value === "")
+  {
+    document.getElementById("message").innerHTML = "Part Number Required";
+	return false;
+  }
+  else
+  {
+    window.location.href = "PartsOnHand.html";
+	return false;
+  } 
+}
+</script>
+</body>
+</html>

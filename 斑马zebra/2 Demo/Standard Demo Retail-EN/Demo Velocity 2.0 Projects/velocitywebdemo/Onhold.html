@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Task Onhold</title>
+<link rel="stylesheet" type="text/css" href="css/Onhold.css">
+<script type = "text/javascript">
+var transactionScreenSource = "";
+var taskNum;
+function prepareScreen()
+{
+	var urlData = window.location.href;
+	var index = urlData.indexOf("=");	
+	var index2 = urlData.indexOf("&");
+	
+	if (index2 === -1)
+	{
+	  urlOnholdData = "Staging";
+	}
+	else
+	{
+	  //Extract Onhold Type.
+	  var urlOnholdData= urlData.slice(index + 1,index2);
+	}
+	
+	
+	switch (urlOnholdData)
+	{
+	  case "Printer":
+	    //Extract task number.
+	    index = urlData.indexOf("&");
+	    var remainingURLData = urlData.slice(index + 1);
+	    index = remainingURLData.indexOf("=");
+	    var urlTaskData = remainingURLData.slice(index + 1);
+	    
+	    taskNum = urlTaskData;
+	    transactionScreenSource = "Printer";
+	  break;
+	  case "Staging":
+	    transactionScreenSource = "Staging";
+	  break;
+	  default:
+	  alert("There is not Onhold type!");
+	  break;
+	}
+	
+	//alert("transactionScreenSource is " + transactionScreenSource);
+	
+}
+</script>
+</head>
+<body onload='prepareScreen()'>
+<h2 class="screenHeading">Put Task on Hold?</h2>
+<form>
+<label class="taskOnholdYes" id="taskOnholdRadioYes"><input type="radio" class="onholdRadioYes" id="taskOnholdRadioButtonYes" name="onholdRadio" value="Yes">Yes</label>
+<label class="taskOnholdNo" id="taskOnHoldRadioNo"><input type="radio" class="onholdRadioNo" id="taskOnholdRadioButtonNo" name="onholdRadio" value="No" checked="checked">No</label>
+<input type="submit" class="submitButton" id="submitOnhold" value="Submit">
+</form>
+<script type ="text/javascript">
+var buttonSubmitOnhold = document.getElementById("submitOnhold");
+buttonSubmitOnhold.onclick = processSubmit;
+function processSubmit()
+{
+  var radioButtons = document.getElementsByName("onholdRadio");
+	
+  switch (transactionScreenSource)
+  {
+    case "Printer":
+	  
+	  if (radioButtons[1].checked)
+	  {
+	    //alert("no checked");
+	    window.location.href = "Printer.html?tasknumber=" + taskNum;
+	  }
+	  else
+	  {
+	    //alert("yes checked");
+	    window.location.href = "WMS_Menu.html";
+	  }
+	  return false;
+	break;
+	case "Staging":
+	  if (radioButtons[1].checked)
+	  {
+	    //No checked
+	    window.location.href = "Staging.html";
+	  }
+	  else
+	  {
+	    //Yes checked
+	    window.location.href = "WMS_Menu.html";
+	  }
+	  return false;
+	break;
+	default:
+	  alert("There is no Onhold type!");
+	  return false;
+	break;
+  }
+}
+</script>
+</body>
+</html>
